@@ -36,34 +36,58 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         --bg: ${Colors.solarisLight0};
-        --text: ${Colors.solarisLight2};
-        --grey: ${Colors.gray};
+        --text: ${Colors.solarisLight9};
+        --text-alt: ${Colors.solarisLight5};
         --bg-footer: ${Colors.solarisLight1};
+        --selection: ${Colors.solarisLight4};
+        --golden: ${Colors.gold};
 
         background-color: var(--bg);
     }
     body.dark {
         --bg: ${Colors.solarisDark0};
-        --text: ${Colors.solarisDark2};
+        --text: ${Colors.solarisDark9};
+        --text-alt: ${Colors.solarisDark5};
         --bg-footer: ${Colors.solarisDark1};
+        --selection: ${Colors.solarisDark4};
+    }
+
+    ::selection {
+        background-color: var(--selection);
     }
 
     /* Transitions */
 
     body,
     h1,
-    p {
-        transition: background-color 500ms;
+    p,
+    a {
+        transition:
+            background-color 500ms,
+            color 500ms;
     }
-
-
 
     /* testing below */
 
     h1 {
+        font-family: "Sequel100Wide-45";
+        text-transform: uppercase;
+        font-size: 100px;
         color: var(--text);
     }
     p {
+        font-family: "Inter";
+        font-weight: 400;
+        font-size: 20px;
         color: var(--text);
+    }
+    a {
+        font-family: "Inter";
+        font-weight: 700;
+        font-size: 32px;
+        color: var(--text);
+    }
+    a[aria-current] {
+        color: var(--text-alt);
     }
 `

@@ -5,7 +5,7 @@ import { ThemeToggler } from "gatsby-plugin-dark-mode"
 
 export default function Header() {
     return (
-        <div>
+        <header>
             <h1>Header</h1>
             <Link to="/">Home</Link>
             <Link to="/work">Work</Link>
@@ -20,6 +20,6 @@ export default function Header() {
                     </button>
                 )}
             </ThemeToggler>
-        </div>
+        </header>
     )
 }
