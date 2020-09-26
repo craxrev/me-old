@@ -6,5 +6,9 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    'gatsby-plugin-layout',
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-dark-mode'
+  ],
 }

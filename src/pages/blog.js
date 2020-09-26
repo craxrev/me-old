@@ -1,10 +1,9 @@
 import React from "react"
-import Layout from "../components/layout/index"
 
 export default function Blog() {
     return (
-        <Layout>
+        <div>
             <p>Blog content here</p>
-        </Layout>
+        </div>
     )
 }

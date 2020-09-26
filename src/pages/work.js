@@ -1,10 +1,9 @@
 import React from "react"
-import Layout from "../components/layout/index"
 
 export default function Work() {
     return (
-        <Layout>
+        <div>
             <p>Work content here</p>
-        </Layout>
+        </div>
     )
 }
