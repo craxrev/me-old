@@ -5,7 +5,7 @@ import fontFiles from "./Fonts"
 export const FontFacesStyle = createGlobalStyle`
 /* Sequel100Wide-45 - latin */
 @font-face {
-    font-family: 'Sequel100Wide-45';
+    font-family: 'Sequel';
     font-style: normal;
     src: url(${fontFiles.Sequel100Wide45WOFF2}) format('woff2'), /* Super Modern Browsers */
          url(${fontFiles.Sequel100Wide45WOFF}) format('woff'), /* Modern Browsers */

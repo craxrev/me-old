@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-text-size-adjust: 100%;
     }
     body {
-        margin: 0;
+        margin: 0 0 0 calc(100vw - 100%);
     }
     h1 {
         font-size: 2em;
@@ -70,21 +70,21 @@ export const GlobalStyle = createGlobalStyle`
     /* testing below */
 
     h1 {
-        font-family: "Sequel100Wide-45";
+        font-family: "Sequel";
         text-transform: uppercase;
-        font-size: 100px;
+        font-size: 6.25em;
         color: var(--text);
     }
     p {
         font-family: "Inter";
         font-weight: 400;
-        font-size: 20px;
+        font-size: 1.25em;
         color: var(--text);
     }
     a {
         font-family: "Inter";
         font-weight: 700;
-        font-size: 32px;
+        font-size: 2em;
         color: var(--text);
     }
     a[aria-current] {
