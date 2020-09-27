@@ -1,9 +1,11 @@
 import React from "react"
 
+import HomeHero from "../components/HomeHero/index"
+
 export default function Home() {
     return (
         <div>
-            <p>Home content here</p>
+            <HomeHero />
         </div>
     )
 }

@@ -1,16 +1,18 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 
+import * as S from "./styles"
+
 export default function Header() {
     return (
-        <header>
-            <h1>Header</h1>
-            <Link to="/">Home</Link>
-            <Link to="/work">Work</Link>
-            <Link to="/blog">Blog</Link>
-            <Link to="/about">About</Link>
+        <S.Header>
+            <S.Nav>
+                <S.A to="/">Home</S.A>
+                <S.A to="/work">Work</S.A>
+                <S.A to="/blog">Blog</S.A>
+                <S.A to="/about">About</S.A>
+            </S.Nav>
             <ThemeToggler>
                 {({ theme, toggleTheme }) => (
                     <button
@@ -20,6 +22,7 @@ export default function Header() {
                     </button>
                 )}
             </ThemeToggler>
-        </header>
+            <S.Email href="mailto:mortadha.ghanmi@beecoop.co">mortadha.ghanmi@beecoop.co</S.Email>
+        </S.Header>
     )
 }

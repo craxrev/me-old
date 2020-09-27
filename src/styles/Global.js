@@ -3,6 +3,9 @@ import { createGlobalStyle } from "styled-components"
 import * as Colors from "./Colors"
 
 export const GlobalStyle = createGlobalStyle`
+
+    /* Resets */
+
     html {
         line-height: 1.15;
         -webkit-text-size-adjust: 100%;
@@ -30,6 +33,12 @@ export const GlobalStyle = createGlobalStyle`
     }
     img {
         border-style: none;
+    }
+
+    /* Sizes */
+
+    html {
+        font-size: min(max(1rem, 4vw), 22px);
     }
 
     /* Colors */
@@ -72,19 +81,19 @@ export const GlobalStyle = createGlobalStyle`
     h1 {
         font-family: "Sequel";
         text-transform: uppercase;
-        font-size: 6.25em;
+        // font-size: 6.25em;
         color: var(--text);
     }
     p {
         font-family: "Inter";
         font-weight: 400;
-        font-size: 1.25em;
+        // font-size: 1.25em;
         color: var(--text);
     }
     a {
         font-family: "Inter";
         font-weight: 700;
-        font-size: 2em;
+        // font-size: 2em;
         color: var(--text);
     }
     a[aria-current] {
