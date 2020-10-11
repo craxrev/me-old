@@ -5,6 +5,7 @@ import { Link } from "gatsby"
 import { navMarginVerticalDesktop } from "../../styles/Sizes"
 
 export const Header = styled.header`
+    position: absolute;
     margin-top: ${navMarginVerticalDesktop};
     margin-bottom: ${navMarginVerticalDesktop};
 `

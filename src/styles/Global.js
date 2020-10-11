@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components"
 
+import { header, body } from "./Type"
 import * as Colors from "./Colors"
 
 export const GlobalStyle = createGlobalStyle`
@@ -35,10 +36,22 @@ export const GlobalStyle = createGlobalStyle`
         border-style: none;
     }
 
-    /* Sizes */
+    /* custom resets */
 
-    html {
-        font-size: min(max(1rem, 4vw), 22px);
+    h1, h2, h3, h4, h5, h6,
+    p,
+    a {
+        margin: 0;
+    }
+
+    /* Type */
+
+    body {
+        ${body}
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        ${header}
     }
 
     /* Colors */
@@ -67,36 +80,21 @@ export const GlobalStyle = createGlobalStyle`
 
     /* Transitions */
 
-    body,
-    h1,
+    body {
+        transition: background-color 500ms;
+    }
+
+    h1, h2, h3, h4, h5, h6,
     p,
     a {
-        transition:
-            background-color 500ms,
-            color 500ms;
+        transition: color 500ms;
+    }
+
+    path {
+        transition: stroke 500ms;
     }
 
     /* testing below */
 
-    h1 {
-        font-family: "Sequel";
-        text-transform: uppercase;
-        // font-size: 6.25em;
-        color: var(--text);
-    }
-    p {
-        font-family: "Inter";
-        font-weight: 400;
-        // font-size: 1.25em;
-        color: var(--text);
-    }
-    a {
-        font-family: "Inter";
-        font-weight: 700;
-        // font-size: 2em;
-        color: var(--text);
-    }
-    a[aria-current] {
-        color: var(--text-alt);
-    }
+    
 `
