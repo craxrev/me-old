@@ -18,6 +18,14 @@ export const fontWeights = {
 
 // Elements
 
+export const header = css`
+    font-family: ${fontFamilies.header};
+`
+
+export const body = css`
+    font-family: ${fontFamilies.content};
+`
+
 export const homeHero = {
     h6: css`
         font-weight: ${fontWeights.regular};
@@ -49,10 +57,18 @@ export const homeHero = {
     `
 }
 
-export const header = css`
-    font-family: ${fontFamilies.header};
-`
-
-export const body = css`
-    font-family: ${fontFamilies.content};
-`
+export const menu = {
+    a: css`
+        font-family: ${fontFamilies.header};
+        font-weight: ${fontWeights.regular};    
+        font-size: 18px;
+        line-height: 27px;
+        text-decoration: none;
+    `,
+    email: css`
+        font-family: ${fontFamilies.header};
+        font-weight: ${fontWeights.regular};    
+        font-size: 18px;
+        line-height: 27px;
+    `
+}

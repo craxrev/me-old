@@ -79,6 +79,8 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     /* Transitions */
+    
+    /* TODO: implement optional transition toggling, i.e. prefers-reduced-motion */
 
     body {
         transition: background-color 500ms;

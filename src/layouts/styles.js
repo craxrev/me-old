@@ -1,6 +1,9 @@
 import styled from "styled-components"
 
 export const Wrapper = styled.div`
+
+    position: relative;
+
     margin-left: 1.375em;
     margin-right: 1.375em;
 
