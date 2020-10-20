@@ -92,6 +92,10 @@ export const GlobalStyle = createGlobalStyle`
         transition: color 500ms;
     }
 
+    div {
+        transition: background-color 500ms;
+    }
+
     path {
         transition: stroke 500ms;
     }
