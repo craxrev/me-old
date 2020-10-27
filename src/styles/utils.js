@@ -45,22 +45,22 @@ export const responsiveType = function ( VWs, FSs, unit="px" ) {
     }
 
     let c
-    let fluidCss = `
+    let responsiveCss = `
         font-size: ${FSs[0]}${unit};
     `
     for (c = 0; c < FSs.length - 1; c++) {
-        fluidCss += `
+        responsiveCss += `
             @media(min-width: ${VWs[c]}${unit}) {
                 font-size: ${FSs[c]}${unit};
             }
         `
     }
-    fluidCss += `
+    responsiveCss += `
         @media(min-width: ${VWs[c]}${unit}) {
             font-size: ${FSs[c]}${unit};
         }
     `
 
-    return css`${fluidCss}`
+    return css`${responsiveCss}`
 
 }

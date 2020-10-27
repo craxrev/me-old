@@ -98,7 +98,7 @@ export const homeHero = {
     `,
     p: css`
         font-weight: ${fontWeights.regular};
-        ${fluidType([375, 768, 1920], [12, 14, 12])}
+        ${fluidType([375, 768], [12, 14])}
         line-height: 1.5em;
     `
 }
@@ -111,12 +111,6 @@ export const homeProjects = {
         line-height: 1.5em;
         text-transform: uppercase;
         letter-spacing: 0.15em;
-    `,
-    footer: css`
-        font-family: ${fontFamilies.content};
-        font-weight: ${fontWeights.regular};
-        ${responsiveType([375, 768, 1920], [12, 14, 18])}
-        line-height: 1.5em;
     `,
     number: css`
         font-family: ${fontFamilies.header};
@@ -138,5 +132,41 @@ export const homeProjects = {
         line-height: 1.5em;
         text-transform: uppercase;
         letter-spacing: 0.15em;
+    `,
+    footer: css`
+        font-family: ${fontFamilies.content};
+        font-weight: ${fontWeights.regular};
+        ${responsiveType([375, 768, 1920], [12, 14, 18])}
+        line-height: 1.5em;
     `
+}
+
+export const homeArticles = {
+    header: css`
+        font-family: ${fontFamilies.header};
+        font-weight: ${fontWeights.regular};
+        ${responsiveType([375, 768], [12, 14])};
+        line-height: 1.5em;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+    `,
+    category: css`
+        font-family: ${fontFamilies.content};
+        font-weight: ${fontWeights.regular};
+        font-size: 12px;
+        line-height: 1.5em;
+        text-transform: uppercase;
+    `,
+    title: css`
+        font-family: ${fontFamilies.header};
+        font-weight: ${fontWeights.regular};
+        ${responsiveType([375, 768], [18, 25])};
+        line-height: 1.5em;
+    `,
+    footer: css`
+        font-family: ${fontFamilies.content};
+        font-weight: ${fontWeights.regular};
+        ${responsiveType([375, 768, 1920], [12, 14, 18])}
+        line-height: 1.5em;
+    `,
 }
