@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 import { Link } from "gatsby"
 
-import { navMarginVerticalDesktop } from "../../styles/Sizes"
+import { navVerticalMargin } from "../../styles/Sizes"
 import { menu, menuResponsive } from "../../styles/Type"
 
 
@@ -10,11 +10,19 @@ import { menu, menuResponsive } from "../../styles/Type"
 
 export const Header = styled.header`
     position: absolute;
+    display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-top: ${navMarginVerticalDesktop};
-    margin-bottom: ${navMarginVerticalDesktop};
-    display: flex;
+    margin-top: ${navVerticalMargin.mobile};
+    margin-bottom: ${navVerticalMargin.mobile};
+    @media (min-width: 768px) {
+        margin-top: ${navVerticalMargin.tablet};
+        margin-bottom: ${navVerticalMargin.tablet};
+    }
+    @media (min-width: 980px) {
+        margin-top: ${navVerticalMargin.desktop};
+        margin-bottom: ${navVerticalMargin.desktop};
+    }
 `
 
 export const Nav = styled.nav`
@@ -50,11 +58,20 @@ export const A = styled(Link)`
 
 export const HeaderR = styled.header`
     position: absolute;
+    display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-top: ${navMarginVerticalDesktop};
-    margin-bottom: ${navMarginVerticalDesktop};
-    display: flex;
+    margin-top: ${navVerticalMargin.mobile};
+    margin-bottom: ${navVerticalMargin.mobile};
+    
+    @media (min-width: 768px) {
+        margin-top: ${navVerticalMargin.tablet};
+        margin-bottom: ${navVerticalMargin.tablet};
+    }
+    @media (min-width: 980px) {
+        margin-top: ${navVerticalMargin.desktop};
+        margin-bottom: ${navVerticalMargin.desktop};
+    }
 `
 
 export const MenuToggler = styled.a`

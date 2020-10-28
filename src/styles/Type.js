@@ -77,8 +77,8 @@ export const homeHero = {
         font-weight: ${fontWeights.regular};
         ${fluidType([375, 768, 1920], [8, 10, 12])}
         line-height: 1.15em;
-        text-transform: uppercase;
         letter-spacing: 0.2em;
+        text-transform: uppercase;
         @media(min-width: 768px) {
             letter-spacing: 0.15em;
         }
@@ -109,8 +109,8 @@ export const homeProjects = {
         font-weight: ${fontWeights.regular};
         ${responsiveType([375, 768], [12, 14])};
         line-height: 1.5em;
-        text-transform: uppercase;
         letter-spacing: 0.15em;
+        text-transform: uppercase;
     `,
     number: css`
         font-family: ${fontFamilies.header};
@@ -130,8 +130,8 @@ export const homeProjects = {
         font-weight: ${fontWeights.regular};
         font-size: 14px;
         line-height: 1.5em;
-        text-transform: uppercase;
         letter-spacing: 0.15em;
+        text-transform: uppercase;
     `,
     footer: css`
         font-family: ${fontFamilies.content};
@@ -169,4 +169,42 @@ export const homeArticles = {
         ${responsiveType([375, 768, 1920], [12, 14, 18])}
         line-height: 1.5em;
     `,
+}
+
+export const footer = {
+    emailHeader: css`
+        font-family: ${fontFamilies.header};
+        font-weight: ${fontWeights.regular};
+        ${responsiveType([375, 768], [10, 12])}
+        line-height: 1.08em;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    `,
+    email: css`
+        font-family: ${fontFamilies.header};
+        font-weight: ${fontWeights.regular};
+        ${responsiveType([375, 768], [16, 25])}
+        line-height: 1.5em;
+    `,
+    a: css`
+        font-family: ${fontFamilies.header};
+        font-weight: ${fontWeights.regular};
+        font-size: 12px;
+        line-height: 1.08em;
+        text-transform: uppercase;
+        text-decoration: none;
+    `,
+    copyrights: css`
+        font-family: ${fontFamilies.header};
+        font-weight: ${fontWeights.regular};
+        font-size: 12px;
+        line-height: 1em;
+        letter-spacing: 0.1em;
+    `,
+    info: css`
+        font-family: ${fontFamilies.content};
+        font-weight: ${fontWeights.regular};
+        font-size: 12px;
+        line-height: 1.5em;
+    `
 }

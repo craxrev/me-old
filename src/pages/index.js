@@ -6,10 +6,10 @@ import HomeArticles from "../components/HomeArticles"
 
 export default function Home() {
     return (
-        <div>
+        <main>
             <HomeHero />
             <HomeProjects />
             <HomeArticles />
-        </div>
+        </main>
     )
 }

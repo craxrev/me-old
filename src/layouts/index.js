@@ -11,12 +11,14 @@ import { Wrapper } from "./styles"
 
 export default function Layout({ children }) {
     return (
-        <Wrapper>
-            <FontFacesStyle />
-            <GlobalStyle />
-            <Header />
-            {children}
+        <>
+            <Wrapper>
+                <FontFacesStyle />
+                <GlobalStyle />
+                <Header />
+                {children}
+            </Wrapper>
             <Footer />
-        </Wrapper>
+        </>
     )
 }

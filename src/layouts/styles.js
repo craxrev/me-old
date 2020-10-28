@@ -1,20 +1,23 @@
 import styled from "styled-components"
 
+import { globalHorizontalMargin } from "../styles/Sizes"
+
+
 export const Wrapper = styled.div`
 
     position: relative;
 
-    margin-left: 1.375em;
-    margin-right: 1.375em;
+    margin-left: ${globalHorizontalMargin.mobile};
+    margin-right: ${globalHorizontalMargin.mobile};
 
     @media(min-width: 768px) {
-        margin-left: 2.75em;
-        margin-right: 2.75em;
+        margin-left: ${globalHorizontalMargin.tablet};
+        margin-right: ${globalHorizontalMargin.tablet};
     }
 
     @media(min-width: 980px) {
-        margin-left: 10.625em;
-        margin-right: 10.625em;
+        margin-left: ${globalHorizontalMargin.desktop};
+        margin-right: ${globalHorizontalMargin.desktop};
     }
 
     @media(min-width: 1920px) {

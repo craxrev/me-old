@@ -7,9 +7,19 @@ import { homeArticles } from "../../styles/Type"
 
 export const Section = styled.section`
     margin-top: 95px;
+
+    &:after { // clearfix
+        content: ".";
+        visibility: hidden;
+        display: block;
+        height: 0;
+        clear: both;
+    }
+
     @media(min-width: 980px) {
         margin-top: 300px;
     }
+    
 `
 
 export const Header = styled.h5`

@@ -1,5 +1,13 @@
 // TODO: uppercase below constants
 
-export const navMarginVerticalDesktop = '3.125em';
-export const navMarginVerticalTablet = '2.5em';
-export const navMarginVerticalMobile = '1.5625em';
+export const globalHorizontalMargin = {
+    desktop: "10.625em",
+    tablet: "2.75em",
+    mobile: "1.375em"
+}
+
+export const navVerticalMargin = {
+    desktop: "3.125em",
+    tablet: "2.5em",
+    mobile: "1.5625em"
+}

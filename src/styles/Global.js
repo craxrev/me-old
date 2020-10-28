@@ -11,8 +11,9 @@ export const GlobalStyle = createGlobalStyle`
         line-height: 1.15;
         -webkit-text-size-adjust: 100%;
     }
-    body {
-        margin: 0 0 0 calc(100vw - 100%);
+    body { /* TODO: fix visible space in footer componenet */
+        /* margin: 0 0 0 calc(100vw - 100%); */
+        margin: 0;
     }
     h1 {
         font-size: 2em;
