@@ -1,6 +1,6 @@
 import { useState, useEffect, default as React } from "react"
 
-import { ThemeToggler } from "gatsby-plugin-dark-mode"
+import ThemeSwitch from "../ThemeSwitch"
 
 import * as S from "./styles"
 
@@ -26,15 +26,7 @@ export default function Header() {
                 <S.A to="/blog">Blog</S.A>
                 <S.A to="/about">About</S.A>
             </S.Nav>
-            <ThemeToggler>
-                {({ theme, toggleTheme }) => (
-                    <S.Button
-                        onClick={e => toggleTheme(theme === 'light' ? 'dark' : 'light') }
-                    >
-                        {theme === 'light' ? 'dark' : 'light'} mode
-                    </S.Button>
-                )}
-            </ThemeToggler>
+            <ThemeSwitch />
             <S.Email href="mailto:mortadha.ghanmi@beecoop.co">mortadha.ghanmi@beecoop.co</S.Email>
         </S.Header>
         :
@@ -44,15 +36,7 @@ export default function Header() {
             >
                 {menuOpen ? 'Close' : 'Menu'}
             </S.MenuToggler>
-            <ThemeToggler>
-                {({ theme, toggleTheme }) => (
-                    <S.ButtonR
-                        onClick={e => toggleTheme(theme === 'light' ? 'dark' : 'light') }
-                    >
-                        {theme === 'light' ? 'dark' : 'light'} mode
-                    </S.ButtonR>
-                )}
-            </ThemeToggler>
+            <ThemeSwitch />
             <S.HeaderRContent
                 open={menuOpen}
             >

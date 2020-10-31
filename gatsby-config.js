@@ -5,6 +5,7 @@
  */
 
 // TODO: make /src path resolvable and add dotenv file reading logic
+// TODO: add @component/* alias
 
 module.exports = {
   /* Your site config here */
