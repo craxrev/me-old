@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 import { Link } from "gatsby"
 
-import { homeProjects } from "../../styles/Type"
+import { projects } from "../../styles/Type"
 
 
 export const Section = styled.section`
@@ -10,7 +10,7 @@ export const Section = styled.section`
 `
 
 export const Header = styled.h5`
-    ${homeProjects.header}
+    ${projects.header}
     margin-bottom: 13px;
     color: var(--text);
 
@@ -53,14 +53,14 @@ export const Project = styled.article`
 `
 
 export const Number = styled.p`
-    ${homeProjects.number}
+    ${projects.number}
     position: absolute;
     left: 0;
     color: var(--text);
 `
 
 export const Title = styled.h1`
-    ${homeProjects.title}
+    ${projects.title}
     
 
     color: var(--text);
@@ -68,7 +68,7 @@ export const Title = styled.h1`
 `
 
 export const Category = styled.h3`
-    ${homeProjects.category}
+    ${projects.category}
     margin-left: 4px;
     margin-top: 10px;
     color: var(--text-alt);
@@ -84,7 +84,7 @@ export const Category = styled.h3`
 `
 
 export const Footer = styled(Link)`
-    ${homeProjects.footer}
+    ${projects.footer}
     float: right;
     margin-top: 42px;
     color: var(--text);

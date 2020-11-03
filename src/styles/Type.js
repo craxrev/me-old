@@ -103,7 +103,7 @@ export const homeHero = {
     `
 }
 
-export const homeProjects = {
+export const projects = {
     header: css`
         font-family: ${fontFamilies.header};
         font-weight: ${fontWeights.regular};
