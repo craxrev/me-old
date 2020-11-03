@@ -141,7 +141,7 @@ export const projects = {
     `
 }
 
-export const homeArticles = {
+export const posts = {
     header: css`
         font-family: ${fontFamilies.header};
         font-weight: ${fontWeights.regular};

@@ -2,14 +2,14 @@ import React from "react"
 
 import HomeHero from "../components/HomeHero/index"
 import Projects from "../components/Projects"
-import HomeArticles from "../components/HomeArticles"
+import Posts from "../components/Posts"
 
 export default function Home() {
     return (
         <main>
             <HomeHero />
             <Projects home />
-            <HomeArticles />
+            <Posts home />
         </main>
     )
 }
