@@ -1,6 +1,6 @@
 import React from "react"
 
-import HomeHero from "../components/HomeHero/index"
+import HomeHero from "../components/HomeHero"
 import Projects from "../components/Projects"
 import Posts from "../components/Posts"
 

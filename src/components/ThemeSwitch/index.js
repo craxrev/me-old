@@ -56,8 +56,8 @@ export default function ThemeSwitch() {
                     viewBox="0 0 64 64"
                 >
                     <defs>
-                        <filter id="filter0_f" x="0" y="0" width="64" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <filter id="filter0_f" x="0" y="0" width="64" height="64" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                            <feFlood floodOpacity="0" result="BackgroundImageFix" />
                             <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                             <feGaussianBlur stdDeviation="3.5" result="effect1_foregroundBlur" />
                         </filter>

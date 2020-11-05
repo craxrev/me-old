@@ -1,22 +1,31 @@
-import React from "react"
+import React, { useState } from "react"
 
 import * as S from "./styles"
 
+
 export default function Projects(props) {
+    const [active, setActive] = useState(0)
+    const toggleActive = (idx) => setActive(idx)
     return (
         <S.Section>
             {props.home &&
             <S.Header>Selected Projects</S.Header>
             }
-            <S.Main>{Array.from(Array(4), (e, i) => {
+            <S.Main>{Array.from(Array(4), (e, idx) => {
                 return (
-                    <S.Project>
-                        <S.Number>{(i+1).toString().padStart(2, "0")}</S.Number>
+                    <S.Project
+                        active={active === idx}
+                        onMouseEnter={() => toggleActive(idx)}
+                        key={idx}
+                    >
+                        <S.Number>{(idx+1).toString().padStart(2, "0")}</S.Number>
                         <S.Title>Beecoop</S.Title>
                         <S.Category>Front end</S.Category>
+                        <S.Thumbnail src="https://via.placeholder.com/600x600" alt={'image-' + (idx+1)} />
                     </S.Project>
                 )
-            })}</S.Main>
+            }
+            )}</S.Main>
             {props.home &&
             <S.Footer to="/work">
                 All projects

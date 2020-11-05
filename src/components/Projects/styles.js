@@ -26,6 +26,19 @@ export const Main = styled.main`
     
 `
 
+export const Thumbnail = styled.img`
+    position: absolute;
+    right: 0;
+    top: -200px;
+    z-index: 1;
+    opacity: 0;
+    transform: translateX(-200px);
+    transition:
+        transform 500ms ease-in-out,
+        opacity 500ms ease-in-out;
+    pointer-events: none;
+`
+
 export const Project = styled.article`
     position: relative;
 
@@ -50,6 +63,14 @@ export const Project = styled.article`
         padding-top: 54px;
         padding-bottom: 54px;
     }
+
+    ${({active}) => active && `
+        ${Thumbnail} {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    `}
+
 `
 
 export const Number = styled.p`

@@ -8,9 +8,9 @@ export default function Posts(props) {
             {props.home &&
             <S.Header>Selected Articles</S.Header>
             }
-            <S.Main>{Array.from(Array(4), (e, i) => {
+            <S.Main>{Array.from(Array(4), (e, idx) => {
                 return (
-                    <S.Article>
+                    <S.Article key={idx}>
                         <S.Thumb alt="placeholder" src="https://via.placeholder.com/721x531" />
                         <S.Category>Front end</S.Category>
                         <S.Title>Why a design system is the key to scaling accessibility</S.Title>
