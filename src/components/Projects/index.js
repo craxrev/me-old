@@ -1,10 +1,12 @@
 import React, { useState } from "react"
 
+import Project from "../Project"
+
 import * as S from "./styles"
 
 
 export default function Projects(props) {
-    const [active, setActive] = useState(0)
+    const [activeIdx, setActive] = useState(0)
     const toggleActive = (idx) => setActive(idx)
     return (
         <S.Section>
@@ -13,16 +15,12 @@ export default function Projects(props) {
             }
             <S.Main>{Array.from(Array(4), (e, idx) => {
                 return (
-                    <S.Project
-                        active={active === idx}
-                        onMouseEnter={() => toggleActive(idx)}
+                    <Project
+                        activeIdx={activeIdx}
+                        toggleActive={toggleActive}
+                        idx={idx}
                         key={idx}
-                    >
-                        <S.Number>{(idx+1).toString().padStart(2, "0")}</S.Number>
-                        <S.Title>Beecoop</S.Title>
-                        <S.Category>Front end</S.Category>
-                        <S.Thumbnail src="https://via.placeholder.com/600x600" alt={'image-' + (idx+1)} />
-                    </S.Project>
+                    />
                 )
             }
             )}</S.Main>

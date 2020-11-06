@@ -112,6 +112,15 @@ export const projects = {
         letter-spacing: 0.15em;
         text-transform: uppercase;
     `,
+    footer: css`
+        font-family: ${fontFamilies.content};
+        font-weight: ${fontWeights.regular};
+        ${responsiveType([375, 768, 1920], [12, 14, 18])}
+        line-height: 1.5em;
+    `
+}
+
+export const project = {
     number: css`
         font-family: ${fontFamilies.header};
         font-weight: ${fontWeights.regular};
@@ -132,12 +141,34 @@ export const projects = {
         line-height: 1.5em;
         letter-spacing: 0.15em;
         text-transform: uppercase;
-    `,
-    footer: css`
+    `
+}
+
+export const projectOverview = {
+    back: css`
         font-family: ${fontFamilies.content};
         font-weight: ${fontWeights.regular};
-        ${responsiveType([375, 768, 1920], [12, 14, 18])}
+        ${responsiveType([375, 768], [14, 18])}
+        line-height: 1.08em;
+    `,
+    title: css`
+        font-family: ${fontFamilies.header};
+        font-weight: ${fontWeights.regular};
+        ${fluidType([375, 768, 980], [20, 30, 80])}
+        line-height: 1.08em;
+        text-transform: uppercase;
+    `,
+    description: css`
+        font-family: ${fontFamilies.content};
+        font-weight: ${fontWeights.regular};
+        ${fluidType([375, 768, 980], [12, 14, 18])}
         line-height: 1.5em;
+    `,
+    website: css`
+        font-family: ${fontFamilies.content};
+        font-weight: ${fontWeights.regular};
+        ${responsiveType([375, 768, 980], [12, 14, 18])}
+        line-height: 1.08em;
     `
 }
 
