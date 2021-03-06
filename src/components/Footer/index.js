@@ -33,9 +33,9 @@ export default function Footer() {
             </S.Content>
             <S.Copyrights>
                 <S.LeftText>© 2020 Mortadha Ghanmi</S.LeftText>
-                <S.RightText>Design by <S.inlineA href="#">Malek Chourabi</S.inlineA></S.RightText>
+                <S.RightText>Design by <S.InlineA href="#">Malek Chourabi</S.InlineA></S.RightText>
             </S.Copyrights>
-            <S.Info>This site is built with <S.inlineA href="#">Gatsby</S.inlineA> and hosted on <S.inlineA href="#">Netlify</S.inlineA>. The source code is hosted on <S.inlineA href="#">Github</S.inlineA>.</S.Info>
+            <S.Info>This site is built with <S.InlineA href="#">Gatsby</S.InlineA> and hosted on <S.InlineA href="#">Netlify</S.InlineA>. The source code is hosted on <S.InlineA href="#">Github</S.InlineA>.</S.Info>
         </S.Footer>
     )
 }

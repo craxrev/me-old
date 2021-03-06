@@ -11,7 +11,7 @@ export default function Project(props) {
     const html = document.querySelector('html')
     useEffect( () => {
         collapsed ? (html.style.overflow = 'visible') : (html.style.overflow = 'hidden')
-    }, [collapsed, html.style.overflow] )
+    }, [collapsed, html.style] )
     return (
         <>
             <S.Project

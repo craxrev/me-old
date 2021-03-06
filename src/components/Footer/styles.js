@@ -154,6 +154,6 @@ export const Info = styled.h6`
     color: var(--text);
 `
 
-export const inlineA = styled.a`
+export const InlineA = styled.a`
     color: inherit;
 `
