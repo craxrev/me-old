@@ -7,7 +7,7 @@ import * as S from "./styles"
 export default function Header() {
 
     const [menuOpen, setMenuOpen] = useState(false)
-    const [width, setWidth] = useState(window.innerWidth)
+    const [width, setWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 980)
     const breakpoint = 980
 
     useEffect( () => {

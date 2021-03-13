@@ -8,10 +8,13 @@ import * as S from "./styles"
 export default function Project(props) {
     const [collapsed, setCollapsed] = useState(true)
     const toggleCollapsed = () => setCollapsed(!collapsed)
-    const html = document.querySelector('html')
+
+    const html = typeof document !== 'undefined' ? document.querySelector('html') : null
     useEffect( () => {
         collapsed ? (html.style.overflow = 'visible') : (html.style.overflow = 'hidden')
-    }, [collapsed, html.style] )
+    }, [collapsed, html?.style] )
+    
+    
     return (
         <>
             <S.Project
