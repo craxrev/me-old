@@ -4,7 +4,7 @@ import { homeHero } from "../../styles/Type"
 
 
 export const Section = styled.section`
-    height: 100vh;
+    height: 940px;
     display: flex;
     flex-direction: column;
     justify-content: center;

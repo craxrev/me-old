@@ -4,16 +4,21 @@ import { project } from "../../styles/Type"
 
 
 export const Thumbnail = styled.img`
+    display: none;
+    @media(min-width: 980px) {
+        display: block;
+    }
     position: absolute;
     right: 0;
     top: -200px;
-    z-index: 1;
+    max-width: 50%;
     opacity: 0;
     transform: translateX(-200px);
     transition:
         transform 500ms ease-in-out,
         opacity 500ms ease-in-out;
     pointer-events: none;
+    z-index: 1;
 `
 
 export const Project = styled.article`

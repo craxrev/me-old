@@ -154,14 +154,14 @@ export const projectOverview = {
     title: css`
         font-family: ${fontFamilies.header};
         font-weight: ${fontWeights.regular};
-        ${fluidType([375, 768, 980], [20, 30, 80])}
+        ${fluidType([375, 768, 1920], [20, 30, 80])}
         line-height: 1.08em;
         text-transform: uppercase;
     `,
     description: css`
         font-family: ${fontFamilies.content};
         font-weight: ${fontWeights.regular};
-        ${fluidType([375, 768, 980], [12, 14, 18])}
+        ${fluidType([375, 768, 1920], [12, 14, 18])}
         line-height: 1.5em;
     `,
     website: css`

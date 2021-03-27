@@ -61,28 +61,24 @@ export const HeaderR = styled.header`
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-top: ${navVerticalMargin.mobile};
-    margin-bottom: ${navVerticalMargin.mobile};
+    padding-top: ${navVerticalMargin.mobile};
+    padding-bottom: ${navVerticalMargin.mobile};
     
     @media (min-width: 768px) {
-        margin-top: ${navVerticalMargin.tablet};
-        margin-bottom: ${navVerticalMargin.tablet};
+        padding-top: ${navVerticalMargin.tablet};
+        padding-bottom: ${navVerticalMargin.tablet};
     }
     @media (min-width: 980px) {
-        margin-top: ${navVerticalMargin.desktop};
-        margin-bottom: ${navVerticalMargin.desktop};
+        padding-top: ${navVerticalMargin.desktop};
+        padding-bottom: ${navVerticalMargin.desktop};
     }
 `
 
 export const MenuToggler = styled.a`
     color: var(--text);
-    z-index: 1;
+    z-index: 2;
 `
 
-
-export const ButtonR = styled.button`
-    z-index: 1;
-`
 
 export const HeaderRContent = styled.div`
     position: fixed;
@@ -98,6 +94,7 @@ export const HeaderRContent = styled.div`
     &[open]{
         display: flex;
     }
+    z-index: 1;
 `
 
 export const NavR = styled.nav`
