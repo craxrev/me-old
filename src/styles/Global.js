@@ -101,6 +101,10 @@ export const GlobalStyle = createGlobalStyle`
         transition: stroke 500ms;
     }
 
+    footer {
+        transition: background-color 500ms;
+    }
+
     /* testing below */
 
     
