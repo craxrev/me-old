@@ -1,9 +1,11 @@
 import React from "react"
 
+import Projects from "../components/Projects"
+
 export default function Work() {
     return (
-        <div>
-            <p>Work content here</p>
-        </div>
+        <main>
+            <Projects />
+        </main>
     )
 }

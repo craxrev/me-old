@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 import { Link } from "gatsby"
 
-import { projects } from "../../styles/Type"
+import { page, projects } from "../../styles/Type"
 
 
 export const Section = styled.section`
@@ -20,6 +20,19 @@ export const Header = styled.h5`
     @media(min-width: 980px) {
         margin-bottom: 50px;
     }
+`
+
+export const PageHeader = styled.h1`
+    ${page.title}
+    padding: 100px 0 44px;
+    @media(min-width: 768px) {
+        padding: 200px 0 120px;
+    }
+    @media(min-width: 980px) {
+        padding: 270px 0 180px;
+    }
+    text-align: center;
+    color: var(--text);
 `
 
 export const Main = styled.main`

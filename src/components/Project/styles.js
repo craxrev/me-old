@@ -53,6 +53,8 @@ export const Project = styled.article`
         }
     `}
 
+    cursor: pointer;
+
 `
 
 export const Number = styled.p`

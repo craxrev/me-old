@@ -72,6 +72,16 @@ export const menuResponsive = {
     `
 }
 
+export const page = {
+    title: css`
+        font-family: ${fontFamilies.header};
+        font-weight: ${fontWeights.regular};
+        ${fluidType([375, 768, 1920], [40, 60, 100])}
+        line-height: 1.08em;
+        text-transform: uppercase;
+    `,
+}
+
 export const homeHero = {
     h6: css`
         font-weight: ${fontWeights.regular};
