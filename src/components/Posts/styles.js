@@ -1,12 +1,17 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 import { Link } from "gatsby"
 
-import { posts } from "../../styles/Type"
+import { posts, page } from "../../styles/Type"
 
 
 export const Section = styled.section`
-    margin-top: 95px;
+    ${props => props.home&& css`
+        margin-top: 95px;
+        @media(min-width: 980px) {
+            margin-top: 300px;
+        }
+    `}
 
     &:after { // clearfix
         content: ".";
@@ -15,11 +20,6 @@ export const Section = styled.section`
         height: 0;
         clear: both;
     }
-
-    @media(min-width: 980px) {
-        margin-top: 300px;
-    }
-    
 `
 
 export const Header = styled.h5`
@@ -33,6 +33,19 @@ export const Header = styled.h5`
     @media(min-width: 980px) {
         margin-bottom: 50px;
     }
+`
+
+export const PageHeader = styled.h1`
+    ${page.title}
+    padding: 100px 0 44px;
+    @media(min-width: 768px) {
+        padding: 200px 0 120px;
+    }
+    @media(min-width: 980px) {
+        padding: 270px 0 180px;
+    }
+    text-align: center;
+    color: var(--text);
 `
 
 export const Main = styled.main`
