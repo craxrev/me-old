@@ -47,7 +47,7 @@ export const Button = styled.button`
 export const A = styled(Link)`
     ${menu.a}
     color: var(--text);
-    &[aria-current] {
+    &.active {
         color: var(--text-alt);
         text-decoration: underline;
     }
@@ -107,7 +107,7 @@ export const AR = styled(Link)`
     margin-top: 14px;
     margin-bottom: 14px;
     color: var(--text);
-    &[aria-current] {
+    &.active {
         color: var(--text-alt);
         text-decoration: underline;
     }

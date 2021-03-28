@@ -17,14 +17,17 @@ export default function Header() {
         return () => window.removeEventListener( "resize", handleWindowResize )
     }, [] )
 
+    const A = (props => <S.A {...props} activeClassName="active" />)
+    const AR = (props => <S.AR {...props} activeClassName="active" />)
+
     return (
         width >= breakpoint ? 
         <S.Header>
             <S.Nav>
-                <S.A to="/">Home</S.A>
-                <S.A to="/work">Work</S.A>
-                <S.A to="/blog">Blog</S.A>
-                <S.A to="/about">About</S.A>
+                <A to="/">Home</A>
+                <A to="/work">Work</A>
+                <A to="/blog">Blog</A>
+                <A to="/about">About</A>
             </S.Nav>
             <ThemeSwitch />
             <S.Email href="mailto:mortadha.ghanmi@beecoop.co">mortadha.ghanmi@beecoop.co</S.Email>
@@ -41,10 +44,10 @@ export default function Header() {
                 open={menuOpen}
             >
                 <S.NavR>
-                    <S.AR to="/"      onClick={() => setMenuOpen(!menuOpen)}>Home</S.AR>
-                    <S.AR to="/work"  onClick={() => setMenuOpen(!menuOpen)}>Work</S.AR>
-                    <S.AR to="/blog"  onClick={() => setMenuOpen(!menuOpen)}>Blog</S.AR>
-                    <S.AR to="/about" onClick={() => setMenuOpen(!menuOpen)}>About</S.AR>
+                    <AR to="/"      onClick={() => setMenuOpen(!menuOpen)}>Home</AR>
+                    <AR to="/work"  onClick={() => setMenuOpen(!menuOpen)}>Work</AR>
+                    <AR to="/blog"  onClick={() => setMenuOpen(!menuOpen)}>Blog</AR>
+                    <AR to="/about" onClick={() => setMenuOpen(!menuOpen)}>About</AR>
                 </S.NavR>
                 <S.EmailR href="mailto:mortadha.ghanmi@beecoop.co">mortadha.ghanmi@beecoop.co</S.EmailR>
                 <S.Socials>

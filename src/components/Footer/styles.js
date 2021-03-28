@@ -86,7 +86,7 @@ export const PageLink = styled(Link)`
     margin-bottom: 16px;
     color: var(--text);
 
-    &[aria-current] {
+    &.active {
         text-decoration: underline;
     }
 `

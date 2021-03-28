@@ -3,6 +3,9 @@ import React from "react"
 import * as S from "./styles"
 
 export default function Footer() {
+
+    const PageLink = (props => <S.PageLink {...props} activeClassName="active" />)
+
     return (
         <S.Footer>
             <S.Content>
@@ -12,10 +15,10 @@ export default function Footer() {
                 </S.Main>
                 <S.Links>
                     <S.Pages>
-                        <S.PageLink to="/">Home</S.PageLink>
-                        <S.PageLink to="/work">Work</S.PageLink>
-                        <S.PageLink to="/about">About</S.PageLink>
-                        <S.PageLink to="/blog">Articles</S.PageLink>
+                        <PageLink to="/">Home</PageLink>
+                        <PageLink to="/work">Work</PageLink>
+                        <PageLink to="/about">About</PageLink>
+                        <PageLink to="/blog">Articles</PageLink>
                     </S.Pages>
                     <S.Socials>
                         <S.A href="#">Github</S.A>
