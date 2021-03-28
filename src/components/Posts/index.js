@@ -11,7 +11,7 @@ export default function Posts(props) {
             <S.Main>{Array.from(Array(4), (e, idx) => {
                 return (
                     <S.Article key={idx}>
-                        <S.Thumb alt="placeholder" src="https://via.placeholder.com/721x531" />
+                        <S.Thumbnail alt="placeholder" src="https://via.placeholder.com/721x531" />
                         <S.Category>Front end</S.Category>
                         <S.Title>Why a design system is the key to scaling accessibility</S.Title>
                     </S.Article>

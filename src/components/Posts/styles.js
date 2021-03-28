@@ -56,8 +56,9 @@ export const Article = styled.article`
     }
 `
 
-export const Thumb = styled.img`
+export const Thumbnail = styled.img`
     width: 100%;
+    max-height: 531px;
 `
 
 export const Category = styled.h6`
