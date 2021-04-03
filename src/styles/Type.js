@@ -130,7 +130,7 @@ export const projects = {
     `
 }
 
-export const project = {
+export const projectCard = {
     number: css`
         font-family: ${fontFamilies.header};
         font-weight: ${fontWeights.regular};
@@ -154,7 +154,7 @@ export const project = {
     `
 }
 
-export const projectOverview = {
+export const project = {
     back: css`
         font-family: ${fontFamilies.content};
         font-weight: ${fontWeights.regular};

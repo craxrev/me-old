@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-import Project from "../Project"
+import ProjectCard from "../ProjectCard"
 
 import * as S from "./styles"
 
@@ -16,7 +16,7 @@ export default function Projects(props) {
             }
             <S.Main>{Array.from(Array(4), (e, idx) => {
                 return (
-                    <Project
+                    <ProjectCard
                         activeIdx={activeIdx}
                         toggleActive={toggleActive}
                         idx={idx}

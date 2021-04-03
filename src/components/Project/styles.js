@@ -2,87 +2,151 @@ import styled from "styled-components"
 
 import { project } from "../../styles/Type"
 
+import { globalHorizontalMargin } from "../../styles/Sizes"
+import { navVerticalMargin } from "../../styles/Sizes"
 
-export const Thumbnail = styled.img`
-    display: none;
-    @media(min-width: 980px) {
-        display: block;
-    }
-    position: absolute;
-    right: 0;
-    top: -200px;
-    max-width: 50%;
-    opacity: 0;
-    transform: translateX(-200px);
-    transition:
-        transform 500ms ease-in-out,
-        opacity 500ms ease-in-out;
-    pointer-events: none;
+
+export const Project = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg);
     z-index: 1;
+    overflow: auto;
 `
 
-export const Project = styled.article`
-    position: relative;
+export const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-left: ${globalHorizontalMargin.mobile};
+    margin-right: ${globalHorizontalMargin.mobile};
 
-    border-top: solid 1px var(--text-alt);
-    border-left: none;
-    border-right: none;
-
-    &:last-child {
-        border-bottom: solid 1px var(--text-alt);
+    &:after {
+        flex: 0 0 ${navVerticalMargin.mobile};
     }
-
-    padding-top: 26px;
-    padding-bottom: 26px;
-    padding-left: 22px;
 
     @media(min-width: 768px) {
-        padding-top: 34px;
-        padding-bottom: 34px;
-        padding-left: 44px;
-    }
-    @media(min-width: 980px) {
-        padding-top: 54px;
-        padding-bottom: 54px;
-    }
+        margin-left: ${globalHorizontalMargin.tablet};
+        margin-right: ${globalHorizontalMargin.tablet};
 
-    ${({active}) => active && `
-        ${Thumbnail} {
-            opacity: 1;
-            transform: translateX(0);
+        &:after {
+            flex: 0 0 ${navVerticalMargin.tablet};
         }
-    `}
-
-    cursor: pointer;
-
-`
-
-export const Number = styled.p`
-    ${project.number}
-    position: absolute;
-    left: 0;
-    color: var(--text);
-`
-
-export const Title = styled.h1`
-    ${project.title}
-
-    color: var(--text);
-
-`
-
-export const Category = styled.h3`
-    ${project.category}
-    margin-left: 4px;
-    margin-top: 10px;
-    color: var(--text-alt);
-    
-    @media(max-width: 768px) {
-        display: none;
     }
+
     @media(min-width: 980px) {
-        margin-left: 8px;
+        margin-left: ${globalHorizontalMargin.desktop};
+        margin-right: ${globalHorizontalMargin.desktop};
+
+        &:after {
+            flex: 0 0 ${navVerticalMargin.desktop};
+        }
+    }
+
+    @media(min-width: 1920px) {
+    }
+
+    &:after {
+        content: '';
+    }
+`;
+
+export const Header = styled.header`
+    padding-top: ${navVerticalMargin.mobile};
+    padding-bottom: ${navVerticalMargin.mobile};
+    @media (min-width: 768px) {
+        padding-top: ${navVerticalMargin.tablet};
+        padding-bottom: ${navVerticalMargin.tablet};
+    }
+    @media (min-width: 980px) {
+        padding-top: ${navVerticalMargin.desktop};
+        padding-bottom: ${navVerticalMargin.desktop};
+    }
+`
+
+export const Back = styled.p`
+    display: inline-block;
+    ${project.back}
+    color: var(--text);
+    cursor: pointer;
+    text-decoration: underline;
+`
+
+export const BackSvg = styled.svg`
+    margin-right: 9px;
+`
+
+export const WebsiteSvg = styled.svg`
+    margin-left: 8px;
+    vertical-align: middle;
+`
+
+export const Path = styled.path`
+    stroke: var(--text);
+    stroke-width: 2px;
+`
+
+export const Main = styled.main`
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @media (min-width: 980px) {
+        flex-direction: row;
+    }
+`
+
+export const Text = styled.section`
+    order: 1;
+    margin-top: 102px;
+    @media (min-width: 768px) {
+        margin-top: 128px;
+    }
+    @media (min-width: 980px) {
+        order: 0;
+        margin-top: 0;
+        align-self: flex-end;
+        max-width: 602px;
+    }
+`
+
+export const Title = styled.h3`
+    ${project.title}
+    color: var(--text);
+`
+
+export const Description = styled.p`
+    ${project.description}
+    margin-top: 7px;
+    @media (min-width: 768px) {
         margin-top: 16px;
     }
-    
+    color: var(--text);
 `
+
+export const Website = styled.a`
+    display: inline-block;
+    ${project.website}
+    margin-top: 35px;
+    @media (min-width: 768px) {
+        margin-top: 66px;
+    }
+    @media (min-width: 980px) {
+        margin-top: 102px;
+    }
+    color: var(--text);
+`
+
+export const Thumbnail = styled.img`
+    align-self: center;
+    max-width: 80%;
+    @media (min-width: 768px) {
+        max-width: 66%;
+    }
+    @media (min-width: 980px) {
+        max-width: 50%;
+    }
+`
+
