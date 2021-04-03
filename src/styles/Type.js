@@ -191,6 +191,13 @@ export const posts = {
         text-transform: uppercase;
         letter-spacing: 0.15em;
     `,
+    filterLink: css`
+        font-family: ${fontFamilies.header};
+        font-weight: ${fontWeights.regular};
+        ${responsiveType([375, 768, 1920], [12, 14, 18])}
+        line-height: 1.5em;
+        text-decoration: none;
+    `,
     footer: css`
         font-family: ${fontFamilies.content};
         font-weight: ${fontWeights.regular};

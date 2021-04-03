@@ -48,6 +48,37 @@ export const PageHeader = styled.h1`
     color: var(--text);
 `
 
+export const Filter = styled.nav`
+    margin-left: -18px;
+    @media(min-width: 768px) {
+        margin-left: -36px;
+    }
+    @media(min-width: 980px) {
+        margin-left: -56px;
+    }
+`
+
+export const FilterLink = styled(Link)`
+    ${posts.filterLink}
+    display: inline-block;
+    color: var(--text);
+    &.active {
+        color: var(--text-alt);
+        text-decoration: underline;
+    }
+
+    margin-left: 18px;
+    margin-bottom: 10px;
+    @media(min-width: 768px) {
+        margin-left: 36px;
+        margin-bottom: 14px;
+    }
+    @media(min-width: 980px) {
+        margin-left: 56px;
+        margin-bottom: 20px;
+    }
+`
+
 export const Main = styled.main`
     display: flex;
     flex-wrap: wrap;

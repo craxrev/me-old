@@ -6,11 +6,25 @@ import * as S from "./styles"
 
 
 export default function Posts(props) {
+
+    const FilterLink = (props => <S.FilterLink {...props} activeClassName="active" />)
+
     return (
         <S.Section home={props.home}>
             {props.home ?
                 (<S.Header>Selected Articles</S.Header>):
-                (<S.PageHeader>Articles</S.PageHeader>)
+                (
+                <>
+                    <S.PageHeader>Articles</S.PageHeader>
+                    <S.Filter>
+                        <FilterLink to="/blog">All</FilterLink>
+                        <FilterLink to="/blog/front-end">Front-end</FilterLink>
+                        <FilterLink to="/blog/back-end">Back-end</FilterLink>
+                        <FilterLink to="/blog/security">Security</FilterLink>
+                        <FilterLink to="/blog/technology">Technology</FilterLink>
+                    </S.Filter>
+                </>
+                )
             }
             <S.Main>{Array.from(Array(4), (e, idx) => {
                 return (
