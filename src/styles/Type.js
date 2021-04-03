@@ -191,6 +191,15 @@ export const posts = {
         text-transform: uppercase;
         letter-spacing: 0.15em;
     `,
+    footer: css`
+        font-family: ${fontFamilies.content};
+        font-weight: ${fontWeights.regular};
+        ${responsiveType([375, 768, 1920], [12, 14, 18])}
+        line-height: 1.5em;
+    `,
+}
+
+export const postCard = {
     category: css`
         font-family: ${fontFamilies.content};
         font-weight: ${fontWeights.regular};
@@ -202,12 +211,6 @@ export const posts = {
         font-family: ${fontFamilies.header};
         font-weight: ${fontWeights.regular};
         ${responsiveType([375, 768], [18, 25])};
-        line-height: 1.5em;
-    `,
-    footer: css`
-        font-family: ${fontFamilies.content};
-        font-weight: ${fontWeights.regular};
-        ${responsiveType([375, 768, 1920], [12, 14, 18])}
         line-height: 1.5em;
     `,
 }

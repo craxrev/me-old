@@ -1,6 +1,9 @@
 import React from "react"
 
+import PostCard from "../PostCard"
+
 import * as S from "./styles"
+
 
 export default function Posts(props) {
     return (
@@ -11,11 +14,7 @@ export default function Posts(props) {
             }
             <S.Main>{Array.from(Array(4), (e, idx) => {
                 return (
-                    <S.Article key={idx}>
-                        <S.Thumbnail alt="placeholder" src="https://via.placeholder.com/721x531" />
-                        <S.Category>Front end</S.Category>
-                        <S.Title>Why a design system is the key to scaling accessibility</S.Title>
-                    </S.Article>
+                    <PostCard key={idx} />
                 )
             })}</S.Main>
             {props.home &&
