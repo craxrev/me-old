@@ -24,6 +24,19 @@ export const FontFacesStyle = createGlobalStyle`
        url(${fontFiles.Inter400TTF}) format('truetype'), /* Safari, Android, iOS */
        url(${fontFiles.Inter400SVG}#Inter) format('svg'); /* Legacy iOS */
 }
+/* inter-500 - latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  src: url(${fontFiles.Inter500EOT}); /* IE9 Compat Modes */
+  src: local(''),
+       url(${fontFiles.Inter500EOT}?#iefix) format('embedded-opentype'), /* IE6-IE8 */
+       url(${fontFiles.Inter500WOFF2}) format('woff2'), /* Super Modern Browsers */
+       url(${fontFiles.Inter500WOFF}) format('woff'), /* Modern Browsers */
+       url(${fontFiles.Inter500TTF}) format('truetype'), /* Safari, Android, iOS */
+       url(${fontFiles.Inter500SVG}#Inter) format('svg'); /* Legacy iOS */
+}
 /* inter-700 - latin */
 @font-face {
   font-family: 'Inter';
