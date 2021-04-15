@@ -2,18 +2,17 @@ import { css } from "styled-components"
 
 import { fluidType, responsiveType } from "./utils"
 
-
 // TODO: add fallback fonts
 
 export const fontFamilies = {
     header: "'Sequel', Sans-serif",
-    content: "'Inter', Sans-serif"
+    content: "'Inter', Sans-serif",
 }
 
 export const fontWeights = {
     regular: 400,
     medium: 500,
-    bold: 700
+    bold: 700,
 }
 
 // Elements
@@ -36,10 +35,10 @@ export const menu = {
     `,
     email: css`
         font-family: ${fontFamilies.header};
-        font-weight: ${fontWeights.regular};    
+        font-weight: ${fontWeights.regular};
         font-size: 18px;
         line-height: 1.5em;
-    `
+    `,
 }
 
 export const menuResponsive = {
@@ -69,7 +68,7 @@ export const menuResponsive = {
         font-size: 12px;
         line-height: 1.08em;
         text-decoration: none;
-    `
+    `,
 }
 
 export const page = {
@@ -89,7 +88,7 @@ export const homeHero = {
         line-height: 1.15em;
         letter-spacing: 0.2em;
         text-transform: uppercase;
-        @media(min-width: 768px) {
+        @media (min-width: 768px) {
             letter-spacing: 0.15em;
         }
     `,
@@ -110,7 +109,7 @@ export const homeHero = {
         font-weight: ${fontWeights.regular};
         ${fluidType([375, 768], [12, 14])}
         line-height: 1.5em;
-    `
+    `,
 }
 
 export const projects = {
@@ -127,7 +126,7 @@ export const projects = {
         font-weight: ${fontWeights.regular};
         ${responsiveType([375, 768, 1920], [12, 14, 18])}
         line-height: 1.5em;
-    `
+    `,
 }
 
 export const projectCard = {
@@ -151,7 +150,7 @@ export const projectCard = {
         line-height: 1.5em;
         letter-spacing: 0.15em;
         text-transform: uppercase;
-    `
+    `,
 }
 
 export const project = {
@@ -179,7 +178,7 @@ export const project = {
         font-weight: ${fontWeights.regular};
         ${responsiveType([375, 768, 980], [12, 14, 18])}
         line-height: 1.08em;
-    `
+    `,
 }
 
 export const posts = {
@@ -222,6 +221,48 @@ export const postCard = {
     `,
 }
 
+export const bio = {
+    name: css`
+        font-family: ${fontFamilies.header};
+        font-weight: ${fontWeights.regular};
+        font-size: ${fluidType([375, 768, 1920], [40, 80, 150])};
+        line-height: 1em;
+        text-transform: uppercase;
+    `,
+    title: css`
+        font-family: ${fontFamilies.header};
+        font-weight: ${fontWeights.regular};
+        font-size: 12px;
+        line-height: 1.5em;
+        text-transform: uppercase;
+        letter-spacing: 0.25em;
+    `,
+    paragraph: css`
+        font-family: ${fontFamilies.content};
+        font-weight: ${fontWeights.regular};
+        ${responsiveType([375, 768], [14, 18])}
+        line-height: 1.5em;
+    `,
+    header: css`
+        font-family: ${fontFamilies.content};
+        font-weight: ${fontWeights.medium};
+        ${responsiveType([375, 768], [14, 18])}
+        line-height: 1.21em;
+    `,
+    list: css`
+        font-family: ${fontFamilies.content};
+        font-weight: ${fontWeights.regular};
+        ${responsiveType([375, 768], [14, 18])}
+        line-height: 1.21em;
+    `,
+    link: css`
+        font-family: ${fontFamilies.content};
+        font-weight: ${fontWeights.regular};
+        ${responsiveType([768, 980], [14, 18])}
+        line-height: 1.08em;
+    `,
+}
+
 export const footer = {
     emailHeader: css`
         font-family: ${fontFamilies.header};
@@ -257,5 +298,5 @@ export const footer = {
         font-weight: ${fontWeights.regular};
         font-size: 12px;
         line-height: 1.5em;
-    `
+    `,
 }
