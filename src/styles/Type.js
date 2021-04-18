@@ -221,6 +221,56 @@ export const postCard = {
     `,
 }
 
+export const post = {
+    category: css`
+        font-family: ${fontFamilies.content};
+        font-weight: ${fontWeights.medium};
+        font-size: 12px;
+        line-height: 1.21em;
+        text-transform: uppercase;
+    `,
+    title: css`
+        font-family: ${fontFamilies.header};
+        font-weight: ${fontWeights.regular};
+        ${fluidType([375, 768, 1920], [25, 40, 60])}
+        line-height: 1.2em;
+    `,
+    info: css`
+        font-family: ${fontFamilies.content};
+        font-weight: ${fontWeights.medium};
+        font-size: 14px;
+        line-height: 2.475em;
+    `,
+    tag: css`
+        font-family: ${fontFamilies.content};
+        font-weight: ${fontWeights.regular};
+        font-size: 10px;
+        line-height: 1.08em;
+        text-transform: uppercase;
+        text-decoration: none;
+    `,
+    article: {
+        h2: css`
+            font-family: ${fontFamilies.header};
+            font-weight: ${fontWeights.regular};
+            ${responsiveType([375, 768, 1920], [20, 30, 40])};
+            line-height: 1.5em;
+        `,
+        text: css`
+            font-family: ${fontFamilies.content};
+            font-weight: ${fontWeights.regular};
+            ${responsiveType([375, 768], [16, 18])};
+            line-height: 1.5em;
+        `,
+        q: css`
+            font-family: ${fontFamilies.header};
+            font-weight: ${fontWeights.regular};
+            ${responsiveType([375, 768, 1920], [20, 30, 40])};
+            line-height: 1.172em;
+        `,
+    },
+}
+
 export const bio = {
     name: css`
         font-family: ${fontFamilies.header};

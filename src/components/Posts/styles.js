@@ -22,17 +22,36 @@ export const Section = styled.section`
     }
 `
 
-export const Header = styled.h5`
-    ${posts.header}
-    margin-bottom: 13px;
-    color: var(--text);
+export const Header = styled.div`
+    display: flex;
+    justify-content: space-between;
+    ${props => props.related && css`
+        margin-top: 86px;
+        @media(min-width: 768px) {
+            margin-top: 204px;
+        }
+        @media(min-width: 980px) {
+            margin-top: 364px;
+        }
+    `}
 
+    margin-bottom: 13px;
     @media(min-width: 768px) {
         margin-bottom: 20px;
     }
     @media(min-width: 980px) {
         margin-bottom: 50px;
     }
+`
+
+export const Text = styled.h5`
+    ${posts.header}
+    color: var(--text);
+`
+
+export const Index = styled(Link)`
+    ${posts.footer}
+    color: var(--text);
 `
 
 export const PageHeader = styled.h1`
@@ -86,12 +105,10 @@ export const Main = styled.main`
     border-top: solid 1px var(--text-alt);
 `
 
-export const Footer = styled(Link)`
-    ${posts.footer}
-    float: right;
+export const Footer = styled.div`
+    display: flex;
+    justify-content: space-between;
     margin-top: 42px;
-    color: var(--text);
-
     @media(min-width: 980px) {
         margin-top: 67px;
     }

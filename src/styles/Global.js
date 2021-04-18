@@ -90,7 +90,7 @@ export const GlobalStyle = createGlobalStyle`
     h1, h2, h3, h4, h5, h6,
     p,
     a {
-        transition: color 500ms;
+        transition: color 500ms, box-shadow 500ms;
     }
 
     div {
