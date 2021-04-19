@@ -2,6 +2,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 import { post } from "../../styles/Type"
+import { globalHorizontalMargin } from "../../styles/Sizes"
 
 export const Header = styled.div`
     padding: 153px 0 54px;
@@ -55,7 +56,15 @@ export const Tag = styled(Link)`
 `
 
 export const Cover = styled.img`
-    max-width: 100%;
+    margin: 0 -${globalHorizontalMargin.mobile};
+    max-width: 100vw;
+    @media (min-width: 768px) {
+        margin: 0 -${globalHorizontalMargin.tablet};
+    }
+    @media (min-width: 980px) {
+        max-width: 100%;
+        margin: 0;
+    }
 `
 
 export const Article = styled.article`
