@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 import { Link } from "gatsby"
 
-import { globalHorizontalMargin } from "../../styles/Sizes"
+import { globalHorizontalMargin, containerWidth } from "../../styles/Sizes"
 import { footer } from "../../styles/Type"
 
 
@@ -30,6 +30,11 @@ export const Footer = styled.footer`
         padding-top: 180px;
         padding-bottom: 62px;
     }
+`
+
+export const Container = styled.div`
+    max-width: ${containerWidth};
+    margin: 0 auto;
 `
 
 export const Content = styled.section`

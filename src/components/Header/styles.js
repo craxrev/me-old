@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 import { Link } from "gatsby"
 
-import { navVerticalMargin } from "../../styles/Sizes"
+import { navVerticalMargin, globalHorizontalMargin } from "../../styles/Sizes"
 import { menu, menuResponsive } from "../../styles/Type"
 
 
@@ -12,14 +12,16 @@ export const Header = styled.header`
     position: absolute;
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: calc(100% - ${globalHorizontalMargin.mobile} * 2);
     margin-top: ${navVerticalMargin.mobile};
     margin-bottom: ${navVerticalMargin.mobile};
     @media (min-width: 768px) {
+        width: calc(100% - ${globalHorizontalMargin.tablet} * 2);
         margin-top: ${navVerticalMargin.tablet};
         margin-bottom: ${navVerticalMargin.tablet};
     }
     @media (min-width: 980px) {
+        width: calc(100% - ${globalHorizontalMargin.desktop} * 2);
         margin-top: ${navVerticalMargin.desktop};
         margin-bottom: ${navVerticalMargin.desktop};
     }
@@ -60,15 +62,17 @@ export const HeaderR = styled.header`
     position: absolute;
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: calc(100% - ${globalHorizontalMargin.mobile} * 2);
     padding-top: ${navVerticalMargin.mobile};
     padding-bottom: ${navVerticalMargin.mobile};
     
     @media (min-width: 768px) {
+        width: calc(100% - ${globalHorizontalMargin.tablet} * 2);
         padding-top: ${navVerticalMargin.tablet};
         padding-bottom: ${navVerticalMargin.tablet};
     }
     @media (min-width: 980px) {
+        width: calc(100% - ${globalHorizontalMargin.desktop} * 2);
         padding-top: ${navVerticalMargin.desktop};
         padding-bottom: ${navVerticalMargin.desktop};
     }
