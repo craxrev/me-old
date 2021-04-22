@@ -12,6 +12,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-layout',
     'gatsby-plugin-styled-components',
-    'gatsby-plugin-dark-mode'
+    'gatsby-plugin-dark-mode',
+    'gatsby-plugin-react-helmet'
   ],
 }
