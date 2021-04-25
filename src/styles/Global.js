@@ -112,6 +112,9 @@ export const GlobalStyle = createGlobalStyle`
     body.no-scroll .translated-y {
         transform: translateY(0) !important;
     }
+    body.custom-cursor * {
+        cursor: none;
+    }
 
     /* testing below */
 
