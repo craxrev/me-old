@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 
 import Project from "../Project"
 
@@ -8,12 +8,6 @@ import * as S from "./styles"
 export default function ProjectCard(props) {
     const [collapsed, setCollapsed] = useState(true)
     const toggleCollapsed = () => setCollapsed(!collapsed)
-
-    const html = typeof document !== 'undefined' ? document.querySelector('html') : null
-    useEffect( () => {
-        collapsed ? (html.style.overflow = 'visible') : (html.style.overflow = 'hidden')
-    }, [collapsed, html?.style] )
-    
     
     return (
         <>

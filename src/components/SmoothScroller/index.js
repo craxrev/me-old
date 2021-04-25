@@ -17,14 +17,10 @@ const SmoothScroller = ({ children }) => {
     }
 
     useEffect(() => {
-        setBodyHeight()
-    }, [scrollingContainerSize.height])
-
-    const setBodyHeight = () => {
         document.body.style.height = `${
             scrollingContainerRef.current.getBoundingClientRect().height
         }px`
-    }
+    }, [scrollingContainerSize.height])
 
     useEffect(() => {
         requestAnimationFrame(() => smoothScrollingHandler())
@@ -44,7 +40,9 @@ const SmoothScroller = ({ children }) => {
 
     return (
         <Scroller>
-            <div ref={scrollingContainerRef}>{children}</div>
+            <div className="translated-y" ref={scrollingContainerRef}>
+                {children}
+            </div>
         </Scroller>
     )
 }

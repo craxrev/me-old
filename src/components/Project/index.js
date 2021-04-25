@@ -1,9 +1,12 @@
 import React from "react"
 
+import useLockBodyScroll from "../../hooks/useLockBodyScroll";
+
 import * as S from "./styles"
 
 
 export default function Project(props) {
+    useLockBodyScroll();
     return (
         <S.Project>
             <S.Container>

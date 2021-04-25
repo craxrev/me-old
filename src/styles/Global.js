@@ -105,6 +105,14 @@ export const GlobalStyle = createGlobalStyle`
         transition: background-color 500ms;
     }
 
+    /* Utilities */
+    body.no-scroll {
+        overflow: hidden;
+    }
+    body.no-scroll .translated-y {
+        transform: translateY(0) !important;
+    }
+
     /* testing below */
 
     
