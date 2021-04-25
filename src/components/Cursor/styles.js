@@ -2,11 +2,12 @@ import styled from "styled-components"
 
 export const CursorItself = styled.div`
     position: fixed;
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    background-color: white;
+    background-color: var(--text);
     z-index: 10000;
     pointer-events: none;
+    mix-blend-mode: difference;
 `

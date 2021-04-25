@@ -13,10 +13,10 @@ import { GlobalStyle } from "../styles/Global"
 import { Wrapper } from "./styles"
 
 export default function Layout({ children }) {
-    const ScrollWrapper = !useDeviceDetect.isMobile ? Fragment : SmoothScroller
+    const ScrollWrapper = useDeviceDetect.isMobile ? Fragment : SmoothScroller
     const CursorElem = useDeviceDetect.isMobile ? Fragment : Cursor
     return (
-        <ScrollWrapper>
+        <>
             <Helmet>
                 <link
                     rel="stylesheet"
@@ -25,12 +25,14 @@ export default function Layout({ children }) {
                 />
             </Helmet>
             <CursorElem />
-            <Wrapper>
-                <GlobalStyle />
-                <Header />
-                {children}
-            </Wrapper>
-            <Footer />
-        </ScrollWrapper>
+            <ScrollWrapper>
+                <Wrapper>
+                    <GlobalStyle />
+                    <Header />
+                    {children}
+                </Wrapper>
+                <Footer />
+            </ScrollWrapper>
+        </>
     )
 }
