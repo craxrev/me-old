@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Fragment } from "react"
 import { Helmet } from "react-helmet"
 
 import SmoothScroller from "../components/SmoothScroller"
@@ -8,10 +8,12 @@ import Footer from "../components/Footer/index"
 import { GlobalStyle } from "../styles/Global"
 
 import { Wrapper } from "./styles"
+import useDeviceDetect from "../hooks/useDeviceDetect"
 
 export default function Layout({ children }) {
+    const ScrollWrapper = useDeviceDetect.isMobile ? Fragment : SmoothScroller
     return (
-        <SmoothScroller>
+        <ScrollWrapper>
             <Helmet>
                 <link
                     rel="stylesheet"
@@ -25,6 +27,6 @@ export default function Layout({ children }) {
                 {children}
             </Wrapper>
             <Footer />
-        </SmoothScroller>
+        </ScrollWrapper>
     )
 }
