@@ -1,6 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 
+import SmoothScroller from "../components/SmoothScroller"
 import Header from "../components/Header/index"
 import Footer from "../components/Footer/index"
 
@@ -10,7 +11,7 @@ import { Wrapper } from "./styles"
 
 export default function Layout({ children }) {
     return (
-        <>
+        <SmoothScroller>
             <Helmet>
                 <link
                     rel="stylesheet"
@@ -24,6 +25,6 @@ export default function Layout({ children }) {
                 {children}
             </Wrapper>
             <Footer />
-        </>
+        </SmoothScroller>
     )
 }
