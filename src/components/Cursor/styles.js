@@ -2,8 +2,8 @@ import styled from "styled-components"
 
 export const CursorItself = styled.div`
     position: fixed;
-    width: 20px;
-    height: 20px;
+    width: 100px;
+    height: 100px;
     transform: translate(-50%, -50%);
     border-radius: 50%;
     background-color: var(--text);
