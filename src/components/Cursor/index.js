@@ -1,24 +1,27 @@
 import React, { useEffect, useRef } from "react"
 
-import { CursorWrapper, CursorItself } from "./styles"
+import { CursorWrapper, CursorCompanion, CursorItself } from "./styles"
 
 const Cursor = () => {
-    const cursorRef = useRef()
+    const cursorCompanionRef = useRef()
+    const cursorItselfRef = useRef()
 
     useEffect(() => {
-        if (cursorRef.current) {
+        if (cursorCompanionRef.current && cursorItselfRef.current) {
             let timeout
             let timeup = true
-            const cursorEl = cursorRef.current
+
+            const cursorCompanionEl = cursorCompanionRef.current
+            const cursorItselfEl = cursorItselfRef.current
 
             const ease = 0.2
             const pos = {
-                x: 0,
-                y: 0,
+                x: 579,
+                y: 313,
             }
             const cursorPos = {
-                x: 200,
-                y: 200,
+                x: 0,
+                y: 0,
             }
             const skew = {
                 x: 0,
@@ -65,7 +68,15 @@ const Cursor = () => {
             const update = () => {
                 cursorPos.x += (pos.x - cursorPos.x) * ease
                 cursorPos.y += (pos.y - cursorPos.y) * ease
-                cursorEl.style.transform = `translate3d(${cursorPos.x}px, ${cursorPos.y}px, 0) skew(${skew.x}deg, ${skew.y}deg)`
+                if (cursorPos.x < 0.01) cursorPos.x = 0
+                if (cursorPos.y < 0.01) cursorPos.y = 0
+
+                const diffX = Math.abs(cursorPos.x - pos.x)
+                const diffY = Math.abs(cursorPos.y - pos.y)
+                if (diffX >= 0.01 || diffY >= 0.01) {
+                    cursorCompanionEl.style.transform = `translate3d(${cursorPos.x}px, ${cursorPos.y}px, 0) skew(${skew.x}deg, ${skew.y}deg)`
+                    cursorItselfEl.style.transform = `translate3d(${pos.x}px, ${pos.y}px, 0)`
+                }
 
                 requestAnimationFrame(update)
             }
@@ -89,8 +100,9 @@ const Cursor = () => {
     }, [])
 
     return (
-        <CursorWrapper ref={cursorRef}>
-            <CursorItself />
+        <CursorWrapper>
+            <CursorCompanion ref={cursorCompanionRef} />
+            <CursorItself ref={cursorItselfRef} />
         </CursorWrapper>
     )
 }
