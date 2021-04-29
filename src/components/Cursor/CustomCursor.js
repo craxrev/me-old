@@ -3,6 +3,10 @@
 const CustomCursor = wrapperElement => {
     const config = {
         ease: 0.2,
+        noiseEase: 0.02,
+        defaultScale: 1,
+        linkScale: 3,
+        withNoise: true,
     }
 
     const state = {
@@ -31,10 +35,12 @@ const CustomCursor = wrapperElement => {
             state.noise.y = 0
         },
         onMouseMoveEnd: () => {
-            state.noiser = setInterval(() => {
-                state.noise.x = (0.5 - Math.random()) * 4
-                state.noise.y = (0.5 - Math.random()) * 4
-            }, 100)
+            if (config.withNoise) {
+                state.noiser = setInterval(() => {
+                    state.noise.x = (0.5 - Math.random()) * 4
+                    state.noise.y = (0.5 - Math.random()) * 4
+                }, 100)
+            }
         },
         onMouseDown: () => {
             logger("onMouseDown")
@@ -45,13 +51,13 @@ const CustomCursor = wrapperElement => {
         onMouseOut: e => {
             const target = e.target
             if (target && target.tagName.toLowerCase() === "a") {
-                state.scale = 1
+                state.scale = config.defaultScale
             }
         },
         onMouseOver: e => {
             const target = e.target
             if (target && target.tagName.toLowerCase() === "a") {
-                state.scale = 3
+                state.scale = config.linkScale
             }
         },
         renderer: undefined,
@@ -70,8 +76,8 @@ const CustomCursor = wrapperElement => {
             x: 0,
             y: 0,
         },
-        scale: 1,
-        cursorScale: 1,
+        scale: config.defaultScale,
+        cursorScale: config.defaultScale,
         skew: {
             x: 0,
             y: 0,
@@ -93,20 +99,32 @@ const CustomCursor = wrapperElement => {
     }
     const update = () => {
         if (state.noise.x === 0 && state.noise.y === 0) {
-            state.cursorPos.x += (state.pos.x - state.cursorPos.x) * config.ease
-            state.cursorPos.y += (state.pos.y - state.cursorPos.y) * config.ease
+            state.cursorPos.x = lerp(
+                state.cursorPos.x,
+                state.pos.x,
+                config.ease
+            )
+            state.cursorPos.y = lerp(
+                state.cursorPos.y,
+                state.pos.y,
+                config.ease
+            )
         } else {
-            state.cursorPos.x +=
-                (state.pos.x + state.noise.x - state.cursorPos.x) *
-                (config.ease / 10)
-            state.cursorPos.y +=
-                (state.pos.y + state.noise.y - state.cursorPos.y) *
-                (config.ease / 10)
+            state.cursorPos.x = lerp(
+                state.cursorPos.x,
+                state.pos.x + state.noise.x,
+                config.noiseEase
+            )
+            state.cursorPos.y = lerp(
+                state.cursorPos.y,
+                state.pos.y + state.noise.y,
+                config.noiseEase
+            )
         }
         if (state.cursorPos.x < 0.01) state.cursorPos.x = 0
         if (state.cursorPos.y < 0.01) state.cursorPos.y = 0
 
-        state.cursorScale += (state.scale - state.cursorScale) * config.ease
+        state.cursorScale = lerp(state.cursorScale, state.scale, config.ease)
 
         const diffX = Math.abs(state.cursorPos.x - state.pos.x)
         const diffY = Math.abs(state.cursorPos.y - state.pos.y)
@@ -143,6 +161,12 @@ const CustomCursor = wrapperElement => {
         render: render,
         destroy: destroy,
     }
+}
+
+// Helper functions
+
+const lerp = (from, to, amt) => {
+    return (to - from) * amt + from
 }
 
 export default CustomCursor
