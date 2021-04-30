@@ -30,15 +30,15 @@ const CustomCursor = wrapperElement => {
             }, 200)
         },
         onMouseMoveStart: () => {
-            clearInterval(state.noiser)
-            state.noise.x = 0
-            state.noise.y = 0
+            clearInterval(state.cursorCompanion.noiser)
+            state.cursorCompanion.noise.x = 0
+            state.cursorCompanion.noise.y = 0
         },
         onMouseMoveEnd: () => {
             if (config.withNoise) {
-                state.noiser = setInterval(() => {
-                    state.noise.x = (0.5 - Math.random()) * 4
-                    state.noise.y = (0.5 - Math.random()) * 4
+                state.cursorCompanion.noiser = setInterval(() => {
+                    state.cursorCompanion.noise.x = (0.5 - Math.random()) * 4
+                    state.cursorCompanion.noise.y = (0.5 - Math.random()) * 4
                 }, 100)
             }
         },
@@ -51,36 +51,38 @@ const CustomCursor = wrapperElement => {
         onMouseOut: e => {
             const target = e.target
             if (target && target.tagName.toLowerCase() === "a") {
-                state.scale = config.defaultScale
+                state.cursorCompanion.scale.target = config.defaultScale
             }
         },
         onMouseOver: e => {
             const target = e.target
             if (target && target.tagName.toLowerCase() === "a") {
-                state.scale = config.linkScale
+                state.cursorCompanion.scale.target = config.linkScale
             }
         },
         renderer: undefined,
-        noiser: undefined,
         timeout: undefined,
         timeup: true,
         pos: {
             x: 579,
             y: 313,
         },
-        cursorPos: {
-            x: 0,
-            y: 0,
-        },
-        noise: {
-            x: 0,
-            y: 0,
-        },
-        scale: config.defaultScale,
-        cursorScale: config.defaultScale,
-        skew: {
-            x: 0,
-            y: 0,
+        cursorCompanion: {
+            noiser: undefined,
+            noise: {
+                x: 0,
+                y: 0,
+            },
+            scale: {
+                target: config.defaultScale,
+                current: config.defaultScale,
+            },
+            pos: {
+                current: {
+                    x: 0,
+                    y: 0,
+                },
+            },
         },
     }
 
@@ -98,38 +100,51 @@ const CustomCursor = wrapperElement => {
         logger("setup")
     }
     const update = () => {
-        if (state.noise.x === 0 && state.noise.y === 0) {
-            state.cursorPos.x = lerp(
-                state.cursorPos.x,
+        if (
+            state.cursorCompanion.noise.x === 0 &&
+            state.cursorCompanion.noise.y === 0
+        ) {
+            state.cursorCompanion.pos.current.x = lerp(
+                state.cursorCompanion.pos.current.x,
                 state.pos.x,
                 config.ease
             )
-            state.cursorPos.y = lerp(
-                state.cursorPos.y,
+            state.cursorCompanion.pos.current.y = lerp(
+                state.cursorCompanion.pos.current.y,
                 state.pos.y,
                 config.ease
             )
         } else {
-            state.cursorPos.x = lerp(
-                state.cursorPos.x,
-                state.pos.x + state.noise.x,
+            state.cursorCompanion.pos.current.x = lerp(
+                state.cursorCompanion.pos.current.x,
+                state.pos.x + state.cursorCompanion.noise.x,
                 config.noiseEase
             )
-            state.cursorPos.y = lerp(
-                state.cursorPos.y,
-                state.pos.y + state.noise.y,
+            state.cursorCompanion.pos.current.y = lerp(
+                state.cursorCompanion.pos.current.y,
+                state.pos.y + state.cursorCompanion.noise.y,
                 config.noiseEase
             )
         }
-        if (state.cursorPos.x < 0.01) state.cursorPos.x = 0
-        if (state.cursorPos.y < 0.01) state.cursorPos.y = 0
+        if (state.cursorCompanion.pos.current.x < 0.01)
+            state.cursorCompanion.pos.current.x = 0
+        if (state.cursorCompanion.pos.current.y < 0.01)
+            state.cursorCompanion.pos.current.y = 0
 
-        state.cursorScale = lerp(state.cursorScale, state.scale, config.ease)
+        state.cursorCompanion.scale.current = lerp(
+            state.cursorCompanion.scale.current,
+            state.cursorCompanion.scale.target,
+            config.ease
+        )
 
-        const diffX = Math.abs(state.cursorPos.x - state.pos.x)
-        const diffY = Math.abs(state.cursorPos.y - state.pos.y)
+        const diffX = Math.abs(
+            state.cursorCompanion.pos.current.x - state.pos.x
+        )
+        const diffY = Math.abs(
+            state.cursorCompanion.pos.current.y - state.pos.y
+        )
         if (diffX >= 0.01 || diffY >= 0.01) {
-            state.el.cursorCompanion.style.transform = `translate3d(${state.cursorPos.x}px, ${state.cursorPos.y}px, 0) skew(${state.skew.x}deg, ${state.skew.y}deg) scale(${state.cursorScale})`
+            state.el.cursorCompanion.style.transform = `translate3d(${state.cursorCompanion.pos.current.x}px, ${state.cursorCompanion.pos.current.y}px, 0) scale(${state.cursorCompanion.scale.current})`
             state.el.cursorItself.style.transform = `translate3d(${state.pos.x}px, ${state.pos.y}px, 0)`
         }
 
