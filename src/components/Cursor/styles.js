@@ -14,6 +14,7 @@ export const CursorCompanion = styled.div`
     height: 20px;
     border-radius: 50%;
     border: 1px solid var(--text-alt);
+    box-sizing: border-box;
 `
 
 export const CursorItself = styled.div`
