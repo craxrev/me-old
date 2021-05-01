@@ -4,8 +4,10 @@ const CustomCursor = wrapperElement => {
     const config = {
         ease: 0.2,
         noiseEase: 0.02,
+        clickEase: 0.02,
         defaultScale: 1,
         linkScale: 3,
+        clickScale: 1.5,
         withNoise: true,
     }
 
@@ -43,10 +45,10 @@ const CustomCursor = wrapperElement => {
             }
         },
         onMouseDown: () => {
-            logger("onMouseDown")
+            state.scale.target = config.clickScale
         },
         onMouseUp: () => {
-            logger("onMouseUp")
+            state.scale.target = config.defaultScale
         },
         onMouseOut: e => {
             const target = e.target
@@ -66,6 +68,10 @@ const CustomCursor = wrapperElement => {
         pos: {
             x: 579,
             y: 313,
+        },
+        scale: {
+            target: config.defaultScale,
+            current: config.defaultScale,
         },
         cursorCompanion: {
             noiser: undefined,
@@ -104,6 +110,7 @@ const CustomCursor = wrapperElement => {
             state.cursorCompanion.noise.x === 0 &&
             state.cursorCompanion.noise.y === 0
         ) {
+            // companion: normal movement
             state.cursorCompanion.pos.current.x = lerp(
                 state.cursorCompanion.pos.current.x,
                 state.pos.x,
@@ -115,6 +122,7 @@ const CustomCursor = wrapperElement => {
                 config.ease
             )
         } else {
+            // companion: noise when stopped
             state.cursorCompanion.pos.current.x = lerp(
                 state.cursorCompanion.pos.current.x,
                 state.pos.x + state.cursorCompanion.noise.x,
@@ -126,15 +134,25 @@ const CustomCursor = wrapperElement => {
                 config.noiseEase
             )
         }
+
+        // companion: stop small movements
         if (state.cursorCompanion.pos.current.x < 0.01)
             state.cursorCompanion.pos.current.x = 0
         if (state.cursorCompanion.pos.current.y < 0.01)
             state.cursorCompanion.pos.current.y = 0
 
+        // companion: hover scaling
         state.cursorCompanion.scale.current = lerp(
             state.cursorCompanion.scale.current,
             state.cursorCompanion.scale.target,
             config.ease
+        )
+
+        // itself: click scaling
+        state.scale.current = lerp(
+            state.scale.current,
+            state.scale.target,
+            config.clickEase
         )
 
         const diffX = Math.abs(
@@ -145,7 +163,7 @@ const CustomCursor = wrapperElement => {
         )
         if (diffX >= 0.01 || diffY >= 0.01) {
             state.el.cursorCompanion.style.transform = `translate3d(${state.cursorCompanion.pos.current.x}px, ${state.cursorCompanion.pos.current.y}px, 0) scale(${state.cursorCompanion.scale.current})`
-            state.el.cursorItself.style.transform = `translate3d(${state.pos.x}px, ${state.pos.y}px, 0)`
+            state.el.cursorItself.style.transform = `translate3d(${state.pos.x}px, ${state.pos.y}px, 0) scale(${state.scale.current})`
         }
 
         requestAnimationFrame(update)
