@@ -52,13 +52,13 @@ const CustomCursor = wrapperElement => {
         },
         onMouseOut: e => {
             const target = e.target
-            if (target && target.tagName.toLowerCase() === "a") {
+            if (clickable(target)) {
                 state.cursorCompanion.scale.target = config.defaultScale
             }
         },
         onMouseOver: e => {
             const target = e.target
-            if (target && target.tagName.toLowerCase() === "a") {
+            if (clickable(target)) {
                 state.cursorCompanion.scale.target = config.linkScale
             }
         },
@@ -200,6 +200,14 @@ const CustomCursor = wrapperElement => {
 
 const lerp = (from, to, amt) => {
     return (to - from) * amt + from
+}
+
+const clickable = element => {
+    return (
+        element &&
+        (element.tagName.toLowerCase() === "a" ||
+            (element.classList && element.classList.contains("clickable")))
+    )
 }
 
 export default CustomCursor
