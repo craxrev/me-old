@@ -4,7 +4,6 @@ export const CursorWrapper = styled.div`
     position: fixed;
     z-index: 10000;
     pointer-events: none;
-    mix-blend-mode: difference;
 `
 
 export const CursorCompanion = styled.div`
@@ -14,7 +13,7 @@ export const CursorCompanion = styled.div`
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: var(--text-alt);
+    border: 1px solid var(--text-alt);
 `
 
 export const CursorItself = styled.div`
