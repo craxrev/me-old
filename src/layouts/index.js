@@ -23,6 +23,7 @@ export default function Layout({ children }) {
                     type="text/css"
                     href="/assets/css/fonts.css"
                 />
+                <meta name="color-scheme" content="dark" />
             </Helmet>
             <CursorElem />
             <ScrollWrapper>

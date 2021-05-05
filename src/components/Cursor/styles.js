@@ -26,3 +26,28 @@ export const CursorItself = styled.div`
     border-radius: 50%;
     background-color: var(--text);
 `
+
+export const CursorTransition = styled.div`
+    div {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        transition: transform 0.5s ease-in-out;
+
+        &:first-child {
+            background-color: var(--text-alt);
+        }
+        &:last-child {
+            background-color: var(--text);
+        }
+    }
+
+    .transitioning & {
+        div {
+            transform: scale(500);
+        }
+    }
+`

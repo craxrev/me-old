@@ -184,10 +184,6 @@ const CustomCursor = wrapperElement => {
         logger("destroy")
     }
 
-    const logger = message => {
-        console.log("[Custom Cursor]", message)
-    }
-
     setup()
 
     return {
@@ -197,6 +193,10 @@ const CustomCursor = wrapperElement => {
 }
 
 // Helper functions
+
+const logger = message => {
+    console.log("[Custom Cursor]", message)
+}
 
 const lerp = (from, to, amt) => {
     return (to - from) * amt + from

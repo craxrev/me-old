@@ -2,7 +2,12 @@ import React, { useEffect, useRef } from "react"
 
 import CustomCursor from "./CustomCursor"
 
-import { CursorWrapper, CursorCompanion, CursorItself } from "./styles"
+import {
+    CursorWrapper,
+    CursorCompanion,
+    CursorItself,
+    CursorTransition,
+} from "./styles"
 
 const Cursor = () => {
     const wrapperRef = useRef()
@@ -17,7 +22,12 @@ const Cursor = () => {
     return (
         <CursorWrapper ref={wrapperRef}>
             <CursorCompanion />
-            <CursorItself />
+            <CursorItself>
+                <CursorTransition>
+                    <div />
+                    <div />
+                </CursorTransition>
+            </CursorItself>
         </CursorWrapper>
     )
 }
