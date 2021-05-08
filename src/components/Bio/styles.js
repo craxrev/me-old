@@ -18,10 +18,9 @@ export const Name = styled.h1`
     color: var(--text);
 `
 
-export const Image = styled.img`
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
+export const Image = styled.div`
+    display: flex;
+    justify-content: center;
 
     padding-bottom: 86px;
     @media (min-width: 768px) {

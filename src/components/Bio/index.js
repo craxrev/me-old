@@ -1,6 +1,5 @@
 import React from "react"
-
-import MeImg from "../../assets/images/me.png"
+import { StaticImage } from "gatsby-plugin-image"
 
 import * as S from "./styles"
 
@@ -8,7 +7,13 @@ export default function Bio() {
     return (
         <S.Bio>
             <S.Name>mortadha ghanmi</S.Name>
-            <S.Image src={MeImg} alt="mortadha ghanmi" />
+            <S.Image>
+                <StaticImage
+                    src="../../assets/images/me.png"
+                    alt="mortadha ghanmi"
+                    placeholder="blurred"
+                />
+            </S.Image>
             <S.Section>
                 <S.Title>Manifesto</S.Title>
                 <S.Content>

@@ -8,11 +8,19 @@
 // TODO: add @component/* alias
 
 module.exports = {
-  /* Your site config here */
-  plugins: [
-    'gatsby-plugin-layout',
-    'gatsby-plugin-styled-components',
-    'gatsby-plugin-dark-mode',
-    'gatsby-plugin-react-helmet'
-  ],
+    /* Your site config here */
+    plugins: [
+        "gatsby-plugin-layout",
+        "gatsby-plugin-styled-components",
+        "gatsby-plugin-dark-mode",
+        "gatsby-plugin-react-helmet",
+        {
+            resolve: "gatsby-plugin-nprogress",
+            options: {
+                color: "tomato",
+            },
+        },
+        "gatsby-plugin-image",
+        "gatsby-plugin-sharp",
+    ],
 }
