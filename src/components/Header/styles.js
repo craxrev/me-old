@@ -146,7 +146,7 @@ export const Socials = styled.nav`
     }
 `
 
-export const Social = styled(Link)`
+export const Social = styled.a`
     ${menuResponsive.socials}
     color: var(--text);
 `
