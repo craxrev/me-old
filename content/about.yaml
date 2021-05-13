@@ -4,15 +4,20 @@ manifesto: |-
     He loves reading Technical blogs, be it at practical or the theoric side of it! he's grateful of that shared knowlegde and he's giving back.. he's started one himself!
 inventory:
     frameworks:
-        - Angular, Gatsby
+        - Next.js,
+        - Gatsby
         - Symfony, Yii2
         - Wordpress
         - Flask
     technologies:
-        - Vim
-        - Docker, Linux
+        - Docker
         - Python, Bash, C, C++
+        - Vanilla JavaScript, Typescript
+        - Less/Scss, GSAP
+        - Git, Github Actions
+        - Travis-Ci, Coverall
     tools:
-        - Git
+        - Linux
+        - WSL2
+        - VScode
         - Figma
-        - code oss
