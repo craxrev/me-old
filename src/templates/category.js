@@ -29,6 +29,7 @@ export default function Category({
 export const page = graphql`
     query($category: String!) {
         allMarkdownRemark(
+            sort: { fields: frontmatter___date, order: DESC }
             filter: {
                 fileAbsolutePath: { regex: "/content/articles/" }
                 frontmatter: {

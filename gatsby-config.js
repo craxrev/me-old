@@ -10,11 +10,11 @@
 module.exports = {
     /* Your site config here */
     siteMetadata: {
-        title: "Creative Developer",
-        subtitle: "Striving for everything digital",
+        title: "<👋Hello></There👊>",
+        subtitle: "DMM, I'm Just hanging 😎ut on the web",
         name: "Mortadha Ghanmi",
         description:
-            "Hello, am a full-stack software engineer from Tunisia, explore my recent projects below, find out who i am, and check out my articles where i share with you what’s in my mind.",
+            "So, I'm Mortadha Ghanmi, I am a SoftWaRe eNgineEr from TUNISIA, I do write good code from time 2 time, otherwise you'll find me fighting typos for days 🤔, I'll be posting some of my fine sauces on my blog (no, not a cook), so stay tuned.. also, I devOps for \"fUn\"",
         email: "mortadha.ghamni56@gmail.com",
         github: "https://github.com/craxrev",
         twitter: "https://twitter.com/craxrev",

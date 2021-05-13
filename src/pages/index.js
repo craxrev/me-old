@@ -33,6 +33,7 @@ export default function Home({
 export const query = graphql`
     query {
         allMarkdownRemark(
+            sort: { fields: frontmatter___date, order: DESC }
             filter: {
                 fileAbsolutePath: { regex: "/content/articles/" }
                 frontmatter: { draft: { eq: false } }

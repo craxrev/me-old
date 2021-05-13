@@ -48,21 +48,29 @@ export default function Posts({ home, related, posts }) {
                                                 field: frontmatter___category
                                             ) {
                                                 fieldValue
+                                                nodes {
+                                                    id
+                                                }
                                             }
                                         }
                                     }
                                 `}
                                 render={({ allMarkdownRemark: { group } }) =>
-                                    group.map(category => (
-                                        <FilterLink
-                                            key={category.fieldValue}
-                                            to={`/blog/${kebabCase(
-                                                category.fieldValue
-                                            )}`}
-                                        >
-                                            {category.fieldValue}
-                                        </FilterLink>
-                                    ))
+                                    group
+                                        .sort(
+                                            (a, b) =>
+                                                a.nodes.length - b.nodes.length
+                                        )
+                                        .map(category => (
+                                            <FilterLink
+                                                key={category.fieldValue}
+                                                to={`/blog/${kebabCase(
+                                                    category.fieldValue
+                                                )}`}
+                                            >
+                                                {category.fieldValue}
+                                            </FilterLink>
+                                        ))
                                 }
                             />
                         </S.Filter>
