@@ -1,16 +1,11 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import { graphql } from "gatsby"
 
+import useSiteMetadata from "../hooks/useSiteMetadata"
 import Posts from "../components/Posts"
 
-export default function Blog({
-    data: {
-        site: {
-            siteMetadata: { name },
-        },
-    },
-}) {
+export default function Blog() {
+    const { name } = useSiteMetadata()
     return (
         <main>
             <Helmet>
@@ -20,13 +15,3 @@ export default function Blog({
         </main>
     )
 }
-
-export const query = graphql`
-    query BlogQuery {
-        site {
-            siteMetadata {
-                name
-            }
-        }
-    }
-`

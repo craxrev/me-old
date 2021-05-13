@@ -1,0 +1,18 @@
+manifesto: |-
+    Mortadha is a full-stack developer at Beecoop.
+    Before that, he was a freelancer working only on front-end projects, after accumalting so much experience in most of the modern front-end frameworks, he's started since improving his backend skill, and now he's more interested in system architecture and security.
+    He loves reading Technical blogs, be it at practical or the theoric side of it! he's grateful of that shared knowlegde and he's giving back.. he's started one himself!
+inventory:
+    frameworks:
+        - Angular, Gatsby
+        - Symfony, Yii2
+        - Wordpress
+        - Flask
+    technologies:
+        - Vim
+        - Docker, Linux
+        - Python, Bash, C, C++
+    tools:
+        - Git
+        - Figma
+        - code oss

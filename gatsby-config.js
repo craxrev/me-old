@@ -33,5 +33,20 @@ module.exports = {
         },
         "gatsby-plugin-image",
         "gatsby-plugin-sharp",
+        {
+            resolve: "gatsby-source-filesystem",
+            options: {
+                name: "markdown-articles",
+                path: `${__dirname}/content/articles`,
+            },
+        },
+        {
+            resolve: "gatsby-source-filesystem",
+            options: {
+                name: "markdown-projects",
+                path: `${__dirname}/content/projects`,
+            },
+        },
+        "gatsby-transformer-remark",
     ],
 }

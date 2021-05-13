@@ -74,6 +74,7 @@ export const Content = styled.div`
 
 export const Paragraph = styled.p`
     ${bio.paragraph}
+    white-space: break-spaces;
     color: var(--text);
 `
 

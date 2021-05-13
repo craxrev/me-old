@@ -2,16 +2,11 @@ import { graphql } from "gatsby"
 import React from "react"
 import { Helmet } from "react-helmet"
 
+import useSiteMetadata from "../hooks/useSiteMetadata"
 import Bio from "../components/Bio"
 
-export default function About({
-    data: {
-        site: {
-            siteMetadata: { name },
-        },
-    },
-}) {
-    console.log(name)
+export default function About() {
+    const { name } = useSiteMetadata()
     return (
         <main>
             <Helmet>
@@ -21,13 +16,3 @@ export default function About({
         </main>
     )
 }
-
-export const query = graphql`
-    query AboutQuery {
-        site {
-            siteMetadata {
-                name
-            }
-        }
-    }
-`
