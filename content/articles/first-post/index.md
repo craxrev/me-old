@@ -1,10 +1,13 @@
 ---
-title: "First Post"
-slug:
+title: "Why a design system is the key to scaling accessibility"
+image: "./post-image.png"
 category: frontend
-tags: angular, frontend, design system
+tags:
+    - angular
+    - frontend
+    - design system
 date: 2021-05-10
-published: true
+draft: false
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. At ornare risus rutrum sit laoreet faucibus molestie. Vivamus pretium, pharetra commodo cras est. it iaculis id eu viverra amet, et. Nunc fermentum sit eu, arcu, ullamcorper scelerisque tincidunt cras. Morbi nisl tellus orci risus porttitor ullamcorper. Amet orci sem id diamrhoncus velit feugiat netus. Aliquet velit enim sagittis cursus urna. Neque eu tristique sit non. Volutpat felis porta viverra nterdum fringilla. Odio tristique ut consequat tempus. Molestie diam rhoncus sodales dui. Netus aliquam urna odio turpis gravida.

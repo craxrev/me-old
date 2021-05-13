@@ -17,7 +17,7 @@ export const Article = styled.article`
     }
 `
 
-export const Thumbnail = styled.img`
+export const Thumbnail = styled.div`
     width: 100%;
     max-height: 531px;
 `

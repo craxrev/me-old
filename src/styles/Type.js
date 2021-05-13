@@ -196,6 +196,7 @@ export const posts = {
         ${responsiveType([375, 768, 1920], [12, 14, 18])}
         line-height: 1.5em;
         text-decoration: none;
+        text-transform: capitalize;
     `,
     footer: css`
         font-family: ${fontFamilies.content};

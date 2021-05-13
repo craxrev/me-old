@@ -1,13 +1,11 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import { graphql } from "gatsby"
 
 import useSiteMetadata from "../hooks/useSiteMetadata"
-import HomeHero from "../components/HomeHero"
-import Projects from "../components/Projects"
 import Posts from "../components/Posts"
+import { graphql } from "gatsby"
 
-export default function Home({
+export default function Category({
     data: {
         allMarkdownRemark: { nodes },
     },
@@ -17,23 +15,23 @@ export default function Home({
     return (
         <main>
             <Helmet>
-                <title>👋 Hey &bull; {name}</title>
+                <title>🔥 Blog &bull; {name}</title>
             </Helmet>
-            <HomeHero />
-            <Projects home />
-            <Posts home posts={posts} />
+            <Posts posts={posts} />
         </main>
     )
 }
 
-export const query = graphql`
-    query {
+export const pageQuery = graphql`
+    query BlogsByCategory($category: String!) {
         allMarkdownRemark(
             filter: {
                 fileAbsolutePath: { regex: "/content/articles/" }
-                frontmatter: { draft: { eq: false } }
+                frontmatter: {
+                    draft: { eq: false }
+                    category: { eq: $category }
+                }
             }
-            limit: 4
         ) {
             nodes {
                 frontmatter {
