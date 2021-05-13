@@ -13,7 +13,11 @@ export default function Home({
     },
 }) {
     const { name } = useSiteMetadata()
-    const posts = nodes.map(node => ({ id: node.id, ...node.frontmatter }))
+    const posts = nodes.map(node => ({
+        id: node.id,
+        slug: node.fields.slug,
+        ...node.frontmatter,
+    }))
     return (
         <main>
             <Helmet>
@@ -36,10 +40,17 @@ export const query = graphql`
             limit: 4
         ) {
             nodes {
+                fields {
+                    slug
+                }
                 frontmatter {
                     image {
                         childImageSharp {
-                            gatsbyImageData
+                            gatsbyImageData(
+                                width: 890
+                                height: 532
+                                placeholder: BLURRED
+                            )
                         }
                     }
                     category

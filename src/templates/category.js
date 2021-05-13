@@ -11,7 +11,11 @@ export default function Category({
     },
 }) {
     const { name } = useSiteMetadata()
-    const posts = nodes.map(node => ({ id: node.id, ...node.frontmatter }))
+    const posts = nodes.map(node => ({
+        id: node.id,
+        slug: node.fields.slug,
+        ...node.frontmatter,
+    }))
     return (
         <main>
             <Helmet>
@@ -22,8 +26,8 @@ export default function Category({
     )
 }
 
-export const pageQuery = graphql`
-    query BlogsByCategory($category: String!) {
+export const page = graphql`
+    query($category: String!) {
         allMarkdownRemark(
             filter: {
                 fileAbsolutePath: { regex: "/content/articles/" }
@@ -34,10 +38,17 @@ export const pageQuery = graphql`
             }
         ) {
             nodes {
+                fields {
+                    slug
+                }
                 frontmatter {
                     image {
                         childImageSharp {
-                            gatsbyImageData
+                            gatsbyImageData(
+                                width: 890
+                                height: 532
+                                placeholder: BLURRED
+                            )
                         }
                     }
                     category

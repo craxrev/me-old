@@ -1,6 +1,6 @@
 ---
 title: "Hello World!"
-image: "./post-image.png"
+image: "./post-image-md.png"
 category: backend
 tags:
     - angular1

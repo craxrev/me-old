@@ -3,15 +3,15 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import * as S from "./styles"
 
-export default function PostCard({ data: { image, category, title } }) {
+export default function PostCard({ data: { slug, image, category, title } }) {
     return (
-        <S.Article>
+        <S.Article to={`/blog/${slug}`}>
             <S.Thumbnail>
                 {image ? (
                     <GatsbyImage image={getImage(image)} alt={title} />
                 ) : (
                     <img
-                        alt="placeholder"
+                        alt={title}
                         src={"https://via.placeholder.com/721x531"}
                     />
                 )}

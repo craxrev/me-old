@@ -46,7 +46,7 @@ export const Tags = styled.ul`
     margin-bottom: 60px;
 `
 
-export const Tag = styled(Link)`
+export const Tag = styled.span`
     ${post.tag}
     display: block;
     padding: 10px 13px;
@@ -55,7 +55,7 @@ export const Tag = styled(Link)`
     color: var(--text);
 `
 
-export const Cover = styled.img`
+export const Cover = styled.div`
     margin: 0 -${globalHorizontalMargin.mobile};
     max-width: 100vw;
     @media (min-width: 768px) {
@@ -70,7 +70,8 @@ export const Cover = styled.img`
 export const Article = styled.article`
     max-width: 784px;
     margin: 0 auto;
-    & > * {
+    & > *,
+    & > p > * {
         display: block;
     }
     p,
@@ -103,7 +104,7 @@ export const Article = styled.article`
             margin: 10px 0;
         }
     }
-    img {
+    .gatsby-resp-image-wrapper {
         margin: 67px 0;
         max-width: 100%;
     }
