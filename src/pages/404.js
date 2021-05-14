@@ -1,9 +1,17 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 
-export default function p404() {
+import useSiteMetadata from "../hooks/useSiteMetadata"
+import FourOwFour from "../components/FourOwFour"
+
+export default function P404() {
+    const { name } = useSiteMetadata()
     return (
-        <div>
-            <p>Well, nothing for the eyes to see.. yet!</p>
-        </div>
+        <main>
+            <Helmet>
+                <title>404 &bull; {name}</title>
+            </Helmet>
+            <FourOwFour />
+        </main>
     )
 }

@@ -351,3 +351,9 @@ export const footer = {
         line-height: 1.5em;
     `,
 }
+
+export const fourOwFour = {
+    text: css`
+        font-size: 50px;
+    `,
+}
