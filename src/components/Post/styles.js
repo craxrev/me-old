@@ -101,7 +101,6 @@ export const Article = styled.article`
         padding-left: 18px;
         li {
             ${post.article.text}
-            margin: 10px 0;
         }
     }
     .gatsby-resp-image-wrapper {

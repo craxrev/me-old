@@ -13,10 +13,15 @@ export default function Article({
         readingTime: markdownRemark.fields.readingTime.text,
         ...markdownRemark.frontmatter,
     }
+    const related = posts.map(post => ({
+        id: post.id,
+        slug: post.fields.slug,
+        ...post.frontmatter,
+    }))
     return (
         <div>
             <Post data={post} />
-            <Posts posts={posts} related />
+            <Posts posts={related} related />
         </div>
     )
 }

@@ -261,7 +261,7 @@ export const post = {
             font-family: ${fontFamilies.content};
             font-weight: ${fontWeights.regular};
             ${responsiveType([375, 768], [16, 18])};
-            line-height: 1.5em;
+            line-height: 2em;
         `,
         q: css`
             font-family: ${fontFamilies.header};
