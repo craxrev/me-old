@@ -1,11 +1,15 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 
 import * as S from "./styles"
 
 export default function ThemeSwitch() {
-    return (
+    const [mounted, setMounted] = useState()
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+    return mounted ? (
         <ThemeToggler>
             {({ theme, toggleTheme }) =>
                 theme === "light" ? (
@@ -53,7 +57,7 @@ export default function ThemeSwitch() {
                         dur="0.5s"
                         repeatCount="1" /> */}
                     </S.Svg>
-                ) : theme === "dark" ? (
+                ) : (
                     <S.Svg
                         onClick={_ =>
                             toggleTheme(theme === "light" ? "dark" : "light")
@@ -112,8 +116,8 @@ export default function ThemeSwitch() {
                             repeatCount="indefinite"
                         />
                     </S.Svg>
-                ) : null
+                )
             }
         </ThemeToggler>
-    )
+    ) : null
 }

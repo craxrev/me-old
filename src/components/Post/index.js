@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import * as S from "./styles"
@@ -11,6 +11,10 @@ export default function Post({
             <S.Tag {...props} />
         </li>
     )
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     return (
         <>
