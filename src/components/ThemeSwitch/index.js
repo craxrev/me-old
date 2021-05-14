@@ -12,7 +12,7 @@ export default function ThemeSwitch() {
     return mounted ? (
         <ThemeToggler>
             {({ theme, toggleTheme }) =>
-                theme === "light" ? (
+                theme === "dark" ? (
                     <S.Svg
                         onClick={_ =>
                             toggleTheme(theme === "light" ? "dark" : "light")

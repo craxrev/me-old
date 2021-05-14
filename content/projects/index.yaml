@@ -1,0 +1,35 @@
+- name: LMB
+  category: Symfony 5
+  description:
+  website:
+  image: https://www.linkmybusiness.fr/
+
+- name: Beecoop
+  category: Wordpress
+  description:
+  website: https://beecoop.co/
+  image:
+
+- name: Coinsence
+  category: Yii2 & devOps
+  description: Coinsence is a decentral collaboration platform and change-maker network powered by blockchain based impact currencies.
+  website: https://coinsence.org/
+  image:
+
+- name: Maabaadhna
+  category: React
+  description:
+  website: https://www.maabaadhna.com/
+  image:
+
+- name: NymphCrea
+  category: Wordpress
+  description:
+  website:
+  image: https://nymphcrea.com/
+
+- name: Octus
+  category: Angular 2+
+  description:
+  website:
+  image:

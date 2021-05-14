@@ -72,10 +72,7 @@ export default function Footer() {
                                 © {new Date().getFullYear()} {name}
                             </S.LeftText>
                             <S.RightText>
-                                Design by{" "}
-                                <S.InlineA href="#" target="_blank">
-                                    Malek Chourabi
-                                </S.InlineA>
+                                Design by <S.InlineA>Malek Chourabi</S.InlineA>
                             </S.RightText>
                         </S.Copyrights>
                         <S.Info>

@@ -14,7 +14,7 @@ module.exports = {
         subtitle: "DMM, I'm Just hanging 😎ut on the web",
         name: "Mortadha Ghanmi",
         description:
-            "So, I'm Mortadha Ghanmi, I am a SoftWaRe eNgineEr from TUNISIA, I do write good code from time 2 time, otherwise you'll find me fighting typos for days 🤔, I'll be posting some of my fine sauces on my blog (no, not a cook), so stay tuned.. also, I devOps for \"fUn\"",
+            "So, I'm Mortadha Ghanmi, I am a SoftWaRe eNgineEr from TUNISIA, I do write good code from time 2 time, otherwise you'll find me fighting typos for days.. I'll be posting some of my fine sauces on my blog, so stay tuned.. also, I pwn for \"fUn\"",
         email: "mortadha.ghamni56@gmail.com",
         github: "https://github.com/craxrev",
         twitter: "https://twitter.com/craxrev",
