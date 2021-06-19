@@ -40,13 +40,19 @@ export default function Project({ toggleCollapsed, idx, data }) {
                             </S.WebsiteSvg>
                         </S.Website>
                     </S.Text>
-                    <S.Thumbnail
-                        src={
-                            "https://via.placeholder.com/600x600?text=img-" +
-                            (idx + 1)
-                        }
-                        alt={"image-" + (idx + 1)}
-                    />
+                    <S.Thumbnail>
+                        {data.image ? (
+                            <img
+                                src={`/assets/projects/${data.image}`}
+                                alt={data.name}
+                            />
+                        ) : (
+                            <img
+                                alt={data.name}
+                                src="https://via.placeholder.com/765x570"
+                            />
+                        )}
+                    </S.Thumbnail>
                 </S.Main>
             </S.Container>
         </S.Project>

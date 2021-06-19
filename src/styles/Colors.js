@@ -1,5 +1,6 @@
 export const solarisLight0 = '#FAF6EF';
 export const solarisLight1 = '#F8F2EA';
+export const solarisLight2 = '#F0EAE1';
 export const solarisLight4 = 'rgba(226, 222, 212, 0.996)'; // was #E2DED4
 export const solarisLight5 = '#A09E96';
 export const solarisLight9 = '#43433D';

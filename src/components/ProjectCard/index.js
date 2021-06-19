@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
 
 import Project from "../Project"
 
@@ -18,13 +19,19 @@ export default function ProjectCard({ activeIdx, idx, toggleActive, data }) {
                 <S.Number>{(idx + 1).toString().padStart(2, "0")}</S.Number>
                 <S.Title>{data.name}</S.Title>
                 <S.Category>{data.category}</S.Category>
-                <S.Thumbnail
-                    src={
-                        "https://via.placeholder.com/600x600?text=img-" +
-                        (idx + 1)
-                    }
-                    alt={"image-" + (idx + 1)}
-                />
+                <S.Thumbnail>
+                    {data.image ? (
+                        <img
+                            src={`/assets/projects/${data.image}`}
+                            alt={data.name}
+                        />
+                    ) : (
+                        <img
+                            alt={data.name}
+                            src="https://via.placeholder.com/765x570"
+                        />
+                    )}
+                </S.Thumbnail>
             </S.ProjectCard>
             {!collapsed && (
                 <Project

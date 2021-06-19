@@ -2,7 +2,7 @@ import React, { useState } from "react"
 
 import ProjectCard from "../ProjectCard"
 
-import Data from "../../../content/projects/index.yaml"
+import Data from "../../../content/projects.yaml"
 
 import * as S from "./styles"
 

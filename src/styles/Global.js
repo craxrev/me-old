@@ -59,19 +59,20 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         --bg: ${Colors.solarisLight0};
+        --bg-alt: ${Colors.solarisLight1};
         --text: ${Colors.solarisLight9};
         --text-alt: ${Colors.solarisLight5};
-        --bg-footer: ${Colors.solarisLight1};
         --selection: ${Colors.solarisLight4};
         --golden: ${Colors.gold};
+        --img-bg: ${Colors.solarisLight2};
 
         background-color: var(--bg);
     }
     body.dark {
         --bg: ${Colors.solarisDark0};
+        --bg-alt: ${Colors.solarisDark1};
         --text: ${Colors.solarisDark9};
         --text-alt: ${Colors.solarisDark5};
-        --bg-footer: ${Colors.solarisDark1};
         --selection: ${Colors.solarisDark4};
     }
 

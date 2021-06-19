@@ -13,7 +13,7 @@ export const Footer = styled.footer`
     padding-right: ${globalHorizontalMargin.mobile};
     padding-top: 46px;
     padding-bottom: 40px;
-    background-color: var(--bg-footer);
+    background-color: var(--bg-alt);
 
     @media(min-width: 768px) {
         margin-top: 356px;

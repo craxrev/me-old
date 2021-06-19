@@ -80,7 +80,7 @@ export const HeaderR = styled.header`
 
 export const MenuToggler = styled.a`
     color: var(--text);
-    z-index: 2;
+    z-index: 1;
 `
 
 

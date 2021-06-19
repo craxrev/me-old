@@ -9,12 +9,14 @@ import { navVerticalMargin } from "../../styles/Sizes"
 export const Project = styled.div`
     position: fixed;
     top: 0;
+    bottom: 0;
     left: 0;
+    right: 0;
     width: 100vw;
-    height: 100vh;
     background-color: var(--bg);
     z-index: 1;
     overflow: auto;
+    overflow-x: hidden;
 `
 
 export const Container = styled.div`
@@ -139,7 +141,8 @@ export const Website = styled.a`
     color: var(--text);
 `
 
-export const Thumbnail = styled.img`
+export const Thumbnail = styled.div`
+    position: relative;
     align-self: center;
     max-width: 80%;
     @media (min-width: 768px) {
@@ -147,6 +150,22 @@ export const Thumbnail = styled.img`
     }
     @media (min-width: 980px) {
         max-width: 50%;
+    }
+    width: 400px;
+    height: 400px;
+    @media (min-width: 980px) {
+        width: 600px;
+        height: 600px;
+    }
+    background-color: var(--img-bg);
+
+    img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        max-width: 150%;
+        max-height: 150%;
+        transform: translate(-50%, -50%);
     }
 `
 
