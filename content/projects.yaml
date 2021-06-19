@@ -1,12 +1,12 @@
 - name: LMB
   category: Symfony 5
-  description:
+  description: A B2B linking platform.
   website: https://www.linkmybusiness.fr/
   image: lmb.png
 
 - name: Beecoop
   category: Wordpress
-  description:
+  description: Portfolio website for the Beecoop team.
   website: https://beecoop.co/
   image: bc.png
 
@@ -18,18 +18,18 @@
 
 - name: WoodyGrace
   category: Wordpress
-  description:
+  description: A website for stuffed toys and creatures for humans.
   website: https://www.woodygrace.com/
   image: wdg.png
 
 - name: NymphCrea
   category: Wordpress
-  description:
+  description: A website that sells wooden furniture and objects.
   website: https://nymphcrea.com/
   image: nmc.png
 
 - name: Octus
   category: Angular 2+
-  description:
+  description: A blockchain digital token based marketplace platform.
   website: localhost/
   image: octus.png
