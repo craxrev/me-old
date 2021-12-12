@@ -37,7 +37,6 @@ export default function Footer() {
                             <S.Links>
                                 <S.Pages>
                                     <PageLink to="/">Home</PageLink>
-                                    <PageLink to="/work">Work</PageLink>
                                     <PageLink to="/about">About</PageLink>
                                     <PageLink to="/blog">Articles</PageLink>
                                 </S.Pages>
@@ -53,8 +52,8 @@ export default function Footer() {
                                     </S.A>
                                 </S.Socials>
                                 <S.Other>
-                                    <S.PageLink to="/tags">Tags</S.PageLink>
-                                    <S.PageLink to="/feed">Feed</S.PageLink>
+                                    <S.PageLink to="#"><s>Tags</s></S.PageLink>
+                                    <S.PageLink to="#"><s>Feed</s></S.PageLink>
                                 </S.Other>
                             </S.Links>
                             <S.Svg
