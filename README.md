@@ -8,6 +8,10 @@
   Gatsby's hello-world starter
 </h1>
 
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/80650f46-4fa6-4b7c-9a9e-81a708ef8eab/deploy-status)](https://app.netlify.com/sites/wonderful-clarke-25c5b7/deploys)
+
 Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
 _Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
