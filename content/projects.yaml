@@ -1,0 +1,35 @@
+- name: LMB
+  category: Symfony 5
+  description: A B2B linking platform.
+  website: https://www.linkmybusiness.fr/
+  image: lmb.png
+
+- name: Beecoop
+  category: Wordpress
+  description: Portfolio website for the Beecoop team.
+  website: https://beecoop.co/
+  image: bc.png
+
+- name: Coinsence
+  category: Yii2 & devOps
+  description: Coinsence is a decentral collaboration platform and change-maker network powered by blockchain based impact currencies.
+  website: https://coinsence.org/
+  image: cs.png
+
+- name: WoodyGrace
+  category: Wordpress
+  description: A website for stuffed toys and creatures for humans.
+  website: https://www.woodygrace.com/
+  image: wdg.png
+
+- name: NymphCrea
+  category: Wordpress
+  description: A website that sells wooden furniture and objects.
+  website: https://nymphcrea.com/
+  image: nmc.png
+
+- name: Octus
+  category: Angular 2+
+  description: A blockchain digital token based marketplace platform.
+  website: localhost/
+  image: octus.png
