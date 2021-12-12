@@ -24,7 +24,6 @@ export default function Home({
                 <title>👋 Hey &bull; {name}</title>
             </Helmet>
             <HomeHero />
-            <Projects home />
             <Posts home posts={posts} />
         </main>
     )

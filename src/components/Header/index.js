@@ -45,7 +45,6 @@ export default function Header() {
                     <S.Header>
                         <S.Nav>
                             <A to="/">Home</A>
-                            <A to="/work">Work</A>
                             <A to="/blog">Blog</A>
                             <A to="/about">About</A>
                         </S.Nav>
